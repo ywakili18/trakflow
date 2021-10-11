@@ -9,14 +9,43 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      User.hasMany(models.Ticket, {
+        foreignKey: 'userId',
+        as: 'userAndTickets'
+      })
+      User.hasMany(models.Comment, {
+        foreignKey: 'userId',
+        as: 'usersAndComments'
+      })
     }
   }
   User.init(
     {
-      userName: DataTypes.STRING,
-      email: DataTypes.STRING,
-      passwordDigest: DataTypes.STRING,
-      role: DataTypes.STRING
+      userName: {
+        type: DataTypes.STRING,
+        unique: true,
+        allowNull: false
+      },
+      email: {
+        type: DataTypes.STRING,
+        unique: true,
+        allowNull: false,
+        validate: {
+          isEmail: true
+        }
+      },
+      passwordDigest: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          min: 8,
+          max: 24
+        }
+      },
+      role: {
+        type: DataTypes.STRING,
+        allowNull: false
+      }
     },
     {
       sequelize,

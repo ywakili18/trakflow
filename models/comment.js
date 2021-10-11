@@ -1,7 +1,7 @@
 'use strict'
 const { Model } = require('sequelize')
 module.exports = (sequelize, DataTypes) => {
-  class Ticket extends Model {
+  class Comment extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -9,21 +9,31 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Ticket.belongsTo(models.User, {
-        foreignKey: 'userId',
-        as: 'ticketsAndUsers'
-      })
-      Ticket.hasMany(models.Comment, {
+      Comment.belongsTo(models.Ticket, {
         foreignKey: 'ticketId',
-        as: 'ticketsAndComments'
+        as: 'commentsAndTickets'
+      })
+      Comment.belongsTo(models.User, {
+        foreignKey: 'userId',
+        as: 'commentsAndUsers'
       })
     }
   }
-  Ticket.init(
+  Comment.init(
     {
-      ticketTitle: { type: DataTypes.STRING, allowNull: false },
-      ticketDescription: { type: DataTypes.STRING, allowNull: false },
-      priority: { type: DataTypes.INTEGER, allowNull: false },
+      commentContent: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      ticketId: {
+        type: DataTypes.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'tickets',
+          key: 'id'
+        },
+        allowNull: false
+      },
       userId: {
         type: DataTypes.INTEGER,
         onDelete: 'CASCADE',
@@ -36,9 +46,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      modelName: 'Ticket',
-      tableName: 'tickets'
+      modelName: 'Comment',
+      tableName: 'comments'
     }
   )
-  return Ticket
+  return Comment
 }

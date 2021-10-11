@@ -1,36 +1,33 @@
 'use strict'
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('users', {
+    await queryInterface.createTable('comments', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      userName: {
-        unique: true,
-        allowNull: false,
-        type: Sequelize.STRING
-      },
-      email: {
+      commentContent: {
         type: Sequelize.STRING,
-        allowNull: false,
-        unique: true,
-        validate: {
-          isEmail: true
-        }
+        allowNull: false
       },
-      passwordDigest: {
-        allowNull: false,
-        type: Sequelize.STRING,
-        validate: {
-          min: 8,
-          max: 24
-        }
+      ticketId: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'tickets',
+          key: 'id'
+        },
+        allowNull: false
       },
-      role: {
-        type: Sequelize.STRING,
+      userId: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'users',
+          key: 'id'
+        },
         allowNull: false
       },
       createdAt: {
@@ -44,6 +41,6 @@ module.exports = {
     })
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('users')
+    await queryInterface.dropTable('comments')
   }
 }
