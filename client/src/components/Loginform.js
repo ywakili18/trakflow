@@ -10,8 +10,7 @@ const Loginform = () => {
         <div class="w-1/2 bg-yellow-100 text-gray-800  px-4 py-6 flex flex-col justify-center">
           <div class="mx-auto text-center">
             <p class="text-2xl font-light">Login to your account</p>
-            <div class=" mt-4 bg-white shadow-md sm:rounded-lg text-left text-sm">
-              <div class="h-2 bg-green-600 rounded-t-md"></div>
+            <div class=" mt-4 bg-white shadow-2xl sm:rounded-lg text-left text-sm">
               <div class="py-6 px-8">
                 <label class="block font-semibold">Username or Email</label>
                 <input

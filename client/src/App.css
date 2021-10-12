@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Manrope:wght@200;300;400;500;800&display=swap');
 .register {
   background: url('https://images.unsplash.com/photo-1534066519516-fc7b4cc6062c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1374&q=80');
   margin: 0;
@@ -10,4 +10,15 @@
   margin: 0;
   padding: 0;
   background-size: 100% auto;
+}
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  font-family: 'Manrope', sans-serif;
+}
+.navbar {
+  font-family: 'Bungee Shade', cursive;
 }
