@@ -39,8 +39,6 @@ export default function Registerform(props) {
   return (
     <div>
       <div class="flex min-h-screen">
-        {/* image container */}
-        <div class="register w-1/2 "></div>
         {/* Register form container */}
         <div class="w-1/2 bg-blue-100 text-gray-800  px-4 py-6 flex flex-col justify-center">
           <div class="mx-auto text-center">
@@ -135,6 +133,8 @@ export default function Registerform(props) {
             </div>
           </div>
         </div>
+        {/* image container */}
+        <div class="register w-1/2 "></div>
       </div>
     </div>
   )

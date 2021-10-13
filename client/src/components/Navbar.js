@@ -42,7 +42,7 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
             to="/"
           >
             <CgPacman className="text-7xl sm:text-8xl" />
-            <button>TrakFlow</button>
+            <button class="mr-4">TrakFlow</button>
           </NavLink>
         </div>
       </nav>
@@ -87,7 +87,7 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
           to="/Dashboard"
         >
           <CgPacman className="text-7xl sm:text-8xl" />
-          <button>TrakFlow</button>
+          <button class="mr-4">TrakFlow</button>
         </NavLink>
       </div>
     </nav>
