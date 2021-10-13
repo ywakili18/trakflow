@@ -10,6 +10,16 @@ export const SignInUser = async (data) => {
     throw error
   }
 }
+export const SignOutUser = async (data) => {
+  try {
+    const res = await Client.post('/auth/logout', data)
+    // Set the current signed in users token to localstorage
+    localStorage.setItem('token', res.data.token)
+    return res.data.user
+  } catch (error) {
+    throw error
+  }
+}
 
 export const RegisterUser = async (data) => {
   try {
