@@ -1,5 +1,6 @@
 import React from 'react'
 import Newticket from '../components/Newticket'
+import Newcomments from '../components/Newcomments'
 const Dashboard = () => {
   return (
     <div class="bg-blue-50 flex">

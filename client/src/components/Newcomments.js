@@ -1,7 +1,6 @@
 import React from 'react'
 import { BsPlusCircleFill } from 'react-icons/bs'
-import Client from '../services/api'
-const Newticket = (props) => {
+const Newcomments = () => {
   return (
     <form class="bg-white w-screen text-base flex flex-col">
       {/* Ticket Title */}
@@ -37,4 +36,4 @@ const Newticket = (props) => {
   )
 }
 
-export default Newticket
+export default Newcomments
