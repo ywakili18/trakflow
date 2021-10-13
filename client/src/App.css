@@ -22,3 +22,6 @@ body {
 .navbar {
   font-family: 'Bungee Shade', cursive;
 }
+.titleContainer {
+  background-color: rgb(223, 203, 243);
+}
