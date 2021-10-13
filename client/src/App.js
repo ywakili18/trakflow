@@ -31,6 +31,7 @@ function App() {
       checkToken()
     }
   }, [])
+
   return (
     <div class="text-6xl">
       <Navbar

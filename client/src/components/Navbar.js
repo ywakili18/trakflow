@@ -84,7 +84,7 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
       <div>
         <NavLink
           className="hover:text-pink-600 transition-all flex text-gray-500"
-          to="/Dashboard"
+          to="/dashboard"
         >
           <CgPacman className="text-7xl sm:text-8xl" />
           <button class="mr-4">TrakFlow</button>
