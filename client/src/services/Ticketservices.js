@@ -10,7 +10,7 @@ export const GetTickets = async () => {
 }
 export const NewTicket = async (newPost) => {
   try {
-    const res = await Client.post('/tickets/createTicket', newPost)
+    const res = await Client.post('/tickets/createTicket', newTicket)
     return res.data
   } catch (err) {
     throw err

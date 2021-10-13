@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { SignInUser } from '../services/Auth'
+import { useHistory } from 'react-router-dom'
 const Loginform = (props) => {
+  const history = useHistory()
+
   const [formValues, setFormValues] = useState({ email: '', password: '' })
 
   const handleChange = (e) => {
@@ -21,7 +24,7 @@ const Loginform = (props) => {
         {/* image container */}
         <div class="login w-1/2 "></div>
         {/* Login form container */}
-        <div class="w-1/2 bg-yellow-100 text-gray-800  px-4 py-6 flex flex-col justify-center">
+        <div class="w-1/2 bg-pink-100 text-gray-800  px-4 py-6 flex flex-col justify-center">
           <div class="mx-auto text-center">
             <p class="text-2xl font-light">Login to your account</p>
             <div class=" mt-4 bg-white shadow-2xl sm:rounded-lg text-left text-sm">

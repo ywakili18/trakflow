@@ -2,12 +2,13 @@ import './App.css'
 import { useState, useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import About from './pages/About'
-import Login from './pages/Login'
+import Loginform from './components/Loginform'
 import Dashboard from './pages/Dashboard'
 import Register from './pages/Register'
 import Navbar from './components/Navbar'
 import { CheckSession } from './services/Auth'
 import ProtectedRoute from './components/ProtectedRoute'
+
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
@@ -51,7 +52,7 @@ function App() {
         <Route
           path="/"
           component={(props) => (
-            <Login
+            <Loginform
               {...props}
               setUser={setUser}
               toggleAuthenticated={toggleAuthenticated}
