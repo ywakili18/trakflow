@@ -17,7 +17,7 @@ module.exports = {
         allowNull: false
       },
       priority: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false
       },
       userId: {

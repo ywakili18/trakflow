@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import { BsPlusCircleFill } from 'react-icons/bs'
 import Currenttickets from './Currenttickets'
 import Client from '../services/api'
+
 const Newticket = () => {
   const [newTicket, setNewTicket] = useState({
     ticketTitle: '',
     ticketDescription: '',
     priority: 0,
-    userId: ''
+    userId: 1
   })
 
   // handle change is temporarily holding the information
@@ -17,16 +18,11 @@ const Newticket = () => {
     setNewTicket(newData)
     console.log(newData)
   }
-  const handlePriority = (e) => {
-    const newData = { ...newTicket }
-    newData[e.target.id] = e.target.value
-    setNewTicket(newData)
-    console.log(newData)
-  }
+
   // handle submit to take the data and post to back end
   const handleSubmit = async (e) => {
     e.preventDefault()
-    Client.post('/tickets/createTicket', {
+    Client.post('/tickets/:userId/createTicket', {
       ticketTitle: newTicket.ticketTitle,
       ticketDescription: newTicket.ticketDescription,
       priority: newTicket.priority,
@@ -77,7 +73,7 @@ const Newticket = () => {
             className="bg-white  shadow border h-40 w-1/2 mx-auto"
             placeholder="Describe in detail new bug/issue"
             name="priority"
-            value={parseInt(newTicket.priority)}
+            value={newTicket.priority}
             onChange={(e) => handleChange(e)}
             id="priority"
             type="number"

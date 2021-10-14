@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       ticketTitle: { type: DataTypes.STRING, allowNull: false },
       ticketDescription: { type: DataTypes.STRING, allowNull: false },
-      priority: { type: DataTypes.INTEGER, allowNull: false },
+      priority: { type: DataTypes.STRING, allowNull: false },
       userId: {
         type: DataTypes.INTEGER,
         onDelete: 'CASCADE',

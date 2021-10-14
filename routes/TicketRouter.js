@@ -23,7 +23,7 @@ AppRouter.put(
 )
 
 AppRouter.post(
-  '/createTicket',
+  '/:userId/createTicket',
   middleware.stripToken,
   middleware.verifyToken,
   controller.CreateTicket
