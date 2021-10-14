@@ -8,9 +8,9 @@ const Currenttickets = (props) => {
   // as /updateticket page. I will then need to pass in the userId state
   // into the updateTicketpage.
   const history = useHistory()
-  const routeChange = () => {
-    let path = `/updateticket`
-    history.push(path)
+
+  const handleClick = () => {
+    history.push('/edit_ticket')
   }
   useEffect(() => {
     async function getTickets() {
@@ -37,8 +37,11 @@ const Currenttickets = (props) => {
 
             {/* <p>Comments: {ticket.ticketsAndComments}</p> */}
             <div class="flex mx-auto">
-              <button class="border-2 text-2xl bg-blue-500 text-white rounded-2xl p-2 h-1/2 hover:bg-red-500 mt-10">
-                <a to={`/tickets/${ticket.id}`}></a>edit ticket
+              <button
+                onClick={handleClick}
+                class="border-2 text-2xl bg-blue-500 text-white rounded-2xl p-2 h-1/2 hover:bg-red-500 mt-10"
+              >
+                edit ticket
               </button>
               <button class="border-2 text-2xl bg-blue-500 text-white rounded-2xl p-2 h-1/2 hover:bg-red-500 mt-10">
                 close ticket
