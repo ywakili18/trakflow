@@ -1,24 +1,25 @@
 import React, { useEffect, useState } from 'react'
 import Client from '../services/api'
+import { useHistory } from 'react-router'
 const Currenttickets = (props) => {
   const [tickets, setTickets] = useState([])
 
-  // I need to add a edit button, which will conditionally render a form to update a tickets"
-  const [updateTicket, setUpdateTicket] = useState({
-    ticketTitle: '',
-    ticketDescription: '',
-    priority: 0,
-    userId: props.user.id
-  })
-  console.log(props)
+  // I need to have onClick button which will send user to Editticketpage.js
+  // as /updateticket page. I will then need to pass in the userId state
+  // into the updateTicketpage.
+  const history = useHistory()
+  const routeChange = () => {
+    let path = `/updateticket`
+    history.push(path)
+  }
   useEffect(() => {
     async function getTickets() {
       const res = await Client.get('/tickets')
-      console.log(res)
       setTickets(res.data)
     }
     getTickets()
   }, [])
+
   return (
     <div className="text-lg flex">
       <div className="border">
@@ -37,7 +38,7 @@ const Currenttickets = (props) => {
             {/* <p>Comments: {ticket.ticketsAndComments}</p> */}
             <div class="flex mx-auto">
               <button class="border-2 text-2xl bg-blue-500 text-white rounded-2xl p-2 h-1/2 hover:bg-red-500 mt-10">
-                edit ticket
+                <a to={`/tickets/${ticket.id}`}></a>edit ticket
               </button>
               <button class="border-2 text-2xl bg-blue-500 text-white rounded-2xl p-2 h-1/2 hover:bg-red-500 mt-10">
                 close ticket

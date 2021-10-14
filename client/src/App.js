@@ -8,6 +8,7 @@ import Register from './pages/Register'
 import Navbar from './components/Navbar'
 import { CheckSession } from './services/Auth'
 import ProtectedRoute from './components/ProtectedRoute'
+import Editticketpage from './pages/Editticketpage'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -48,6 +49,14 @@ function App() {
             user={user}
             path="/dashboard"
             component={Dashboard}
+          />
+        )}
+        {user && authenticated && (
+          <ProtectedRoute
+            authenticated={authenticated}
+            user={user}
+            path="/edit_ticket"
+            component={Editticketpage}
           />
         )}
         <Route
