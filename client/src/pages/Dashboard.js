@@ -1,13 +1,17 @@
 import React from 'react'
 import Newticket from '../components/Newticket'
-
-const Dashboard = () => {
+import Currenttickets from '../components/Currenttickets'
+const Dashboard = (props) => {
+  console.log(props.user)
   return (
-    <div class="bg-blue-50 flex">
+    <div className="bg-blue-50 ">
       {/* <header class="border h-screen w-2/5 text-2xl text-center">
         Dashboard
       </header> */}
-      <Newticket />
+      <Newticket {...props} />
+      <div className="bg-pink-100 mt-5">
+        <Currenttickets />
+      </div>
     </div>
   )
 }

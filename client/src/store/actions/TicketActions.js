@@ -19,13 +19,14 @@ export const CreateTicket = (newTicket) => {
   return async (dispatch) => {
     try {
       const ticket = await NewTicket(newTicket)
+      return ticket
     } catch (err) {
       throw err
     }
   }
 }
 
-export const NewPostState = (post) => ({
+export const NewTicketState = (ticket) => ({
   type: NEW_TICKET,
   payload: ticket
 })
