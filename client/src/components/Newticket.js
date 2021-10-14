@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { BsPlusCircleFill } from 'react-icons/bs'
-import Currenttickets from './Currenttickets'
 import Client from '../services/api'
 
 const Newticket = (props) => {
-  console.log(props.user)
   const [newTicket, setNewTicket] = useState({
     ticketTitle: '',
     ticketDescription: '',
@@ -18,7 +16,6 @@ const Newticket = (props) => {
     const newData = { ...newTicket }
     newData[e.target.name] = e.target.value
     setNewTicket(newData)
-    console.log(newData)
   }
 
   // handle submit to take the data and post to back end
@@ -88,9 +85,9 @@ const Newticket = (props) => {
           <BsPlusCircleFill />
         </button>
       </div>
-      <div className="flex bg-pink-100 mt-5">
+      {/* <div className="flex bg-pink-100 mt-5">
         <Currenttickets />
-      </div>
+      </div> */}
     </form>
   )
 }
