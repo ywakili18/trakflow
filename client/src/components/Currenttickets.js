@@ -12,15 +12,21 @@ const Currenttickets = () => {
     getTickets()
   }, [])
   return (
-    <div>
-      <ul>
+    <div class="text-lg flex">
+      <div class="border">
+        <p class="p-5 text-center bg-pink-100 text-4xl text-gray-600 ">
+          Open Tickets
+        </p>
         {tickets.map((ticket) => (
-          <li key={ticket.id}>
-            <h3>Title: {ticket.ticketTitle}</h3>
-            <h3>Description: {ticket.ticketDescription}</h3>
-          </li>
+          <p key={ticket.id} class="border bg-pink-50 p-5 w-screen">
+            <p>Title: {ticket.ticketTitle}</p>
+            <p>Ticket: {ticket.ticketDescription}</p>
+            <p>Priority Level: {ticket.priority}</p>
+            <p>Timestamp: {ticket.createdAt}</p>
+            {/* <p>Comments: {ticket.ticketsAndComments}</p> */}
+          </p>
         ))}
-      </ul>
+      </div>
     </div>
   )
 }

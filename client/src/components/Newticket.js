@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { BsPlusCircleFill } from 'react-icons/bs'
+import Currenttickets from './Currenttickets'
 import Client from '../services/api'
 const Newticket = (props) => {
   return (
@@ -35,6 +36,9 @@ const Newticket = (props) => {
         >
           <BsPlusCircleFill />
         </button>
+      </div>
+      <div class="flex bg-pink-100">
+        <Currenttickets />
       </div>
     </form>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
 import Newticket from '../components/Newticket'
-import Currenttickets from '../components/Currenttickets'
+
 const Dashboard = () => {
   return (
     <div class="bg-blue-50 flex">
@@ -8,7 +8,6 @@ const Dashboard = () => {
         Dashboard
       </header>
       <Newticket />
-      <Currenttickets />
     </div>
   )
 }
