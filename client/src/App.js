@@ -33,7 +33,7 @@ function App() {
   }, [])
 
   return (
-    <div class="text-6xl">
+    <div className="text-6xl">
       <Navbar
         authenticated={authenticated}
         user={user}

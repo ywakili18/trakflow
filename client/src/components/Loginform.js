@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import { SignInUser } from '../services/Auth'
-import { useHistory } from 'react-router-dom'
-const Loginform = (props) => {
-  const history = useHistory()
 
+const Loginform = (props) => {
   const [formValues, setFormValues] = useState({ email: '', password: '' })
 
   const handleChange = (e) => {
@@ -20,16 +18,16 @@ const Loginform = (props) => {
   }
   return (
     <div>
-      <div class="flex min-h-screen">
+      <div className="flex min-h-screen">
         {/* image container */}
-        <div class="login w-1/2 "></div>
+        <div className="login w-1/2 "></div>
         {/* Login form container */}
-        <div class="w-1/2 bg-pink-100 text-gray-800  px-4 py-6 flex flex-col justify-center">
-          <div class="mx-auto text-center">
-            <p class="text-2xl font-light">Login to your account</p>
-            <div class=" mt-4 bg-white shadow-2xl sm:rounded-lg text-left text-sm">
-              <form class="py-6 px-8" onSubmit={handleSubmit}>
-                <label class="block font-semibold">Username or Email</label>
+        <div className="w-1/2 bg-pink-100 text-gray-800  px-4 py-6 flex flex-col justify-center">
+          <div className="mx-auto text-center">
+            <p className="text-2xl font-light">Login to your account</p>
+            <div className=" mt-4 bg-white shadow-2xl sm:rounded-lg text-left text-sm">
+              <form className="py-6 px-8" onSubmit={handleSubmit}>
+                <label className="block font-semibold">Username or Email</label>
                 <input
                   onChange={handleChange}
                   name="email"
@@ -37,20 +35,20 @@ const Loginform = (props) => {
                   placeholder="example@example.com"
                   value={formValues.email}
                   required
-                  class=" border h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
+                  className=" border h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
                 />
-                <label class="block mt-3 font-semibold">Password</label>
+                <label className="block mt-3 font-semibold">Password</label>
                 <input
                   onChange={handleChange}
                   type="password"
                   name="password"
                   value={formValues.password}
                   required
-                  class=" border w-full h-5 px-2 py-4 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
+                  className=" border w-full h-5 px-2 py-4 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
                 />
-                <div class="flex justify-between items-baseline">
+                <div className="flex justify-between items-baseline">
                   <button
-                    class="mt-4 text-indigo-100 
+                    className="mt-4 text-indigo-100 
                         transition-colors 
                         duration-150 
                         bg-blue-700 rounded-lg 
@@ -60,7 +58,9 @@ const Loginform = (props) => {
                   >
                     Login
                   </button>
-                  <a class="text-sm hover:underline p-4">Forgot password?</a>
+                  <p className="text-sm hover:underline p-4">
+                    Forgot password?
+                  </p>
                 </div>
               </form>
             </div>

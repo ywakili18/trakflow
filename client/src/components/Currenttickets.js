@@ -12,19 +12,19 @@ const Currenttickets = () => {
     getTickets()
   }, [])
   return (
-    <div class="text-lg flex">
-      <div class="border">
-        <p class="p-5 text-center bg-pink-100 text-4xl text-gray-600 ">
+    <div className="text-lg flex">
+      <div className="border">
+        <p className="p-5 text-center bg-pink-100 text-4xl text-gray-600 ">
           Open Tickets
         </p>
         {tickets.map((ticket) => (
-          <p key={ticket.id} class="border bg-pink-50 p-5 w-screen">
+          <div key={ticket.id} className="border bg-pink-50 p-5 w-screen">
             <p>Title: {ticket.ticketTitle}</p>
             <p>Ticket: {ticket.ticketDescription}</p>
             <p>Priority Level: {ticket.priority}</p>
             <p>Timestamp: {ticket.createdAt}</p>
             {/* <p>Comments: {ticket.ticketsAndComments}</p> */}
-          </p>
+          </div>
         ))}
       </div>
     </div>

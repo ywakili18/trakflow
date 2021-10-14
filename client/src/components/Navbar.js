@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { CgPacman } from 'react-icons/cg'
 import { MdOutlineDashboardCustomize } from 'react-icons/md'
@@ -7,8 +7,8 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
   let unauthenticatedOptions
   if (!user) {
     unauthenticatedOptions = (
-      <nav class="text-gray-900 flex  bg-pink-50 navbar justify-between text-2xl">
-        <div class="flex">
+      <nav className="text-gray-900 flex  bg-pink-50 navbar justify-between text-2xl">
+        <div className="flex">
           <NavLink
             className=" 
         hover:text-indigo-400
@@ -42,7 +42,7 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
             to="/"
           >
             <CgPacman className="text-7xl sm:text-8xl" />
-            <button class="mr-4">TrakFlow</button>
+            <button className="mr-4">TrakFlow</button>
           </NavLink>
         </div>
       </nav>
@@ -50,8 +50,8 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
   }
 
   const authenticatedOptions = (
-    <nav class="text-gray-900 flex  bg-pink-50 navbar justify-between text-2xl">
-      <div class="flex">
+    <nav className="text-gray-900 flex  bg-pink-50 navbar justify-between text-2xl">
+      <div className="flex">
         <NavLink
           className=" 
         hover:text-yellow-600
@@ -87,7 +87,7 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
           to="/dashboard"
         >
           <CgPacman className="text-7xl sm:text-8xl" />
-          <button class="mr-4">TrakFlow</button>
+          <button className="mr-4">TrakFlow</button>
         </NavLink>
       </div>
     </nav>
