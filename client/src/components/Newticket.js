@@ -6,30 +6,40 @@ const Newticket = () => {
   const [newTicket, setNewTicket] = useState({
     ticketTitle: '',
     ticketDescription: '',
-    priority: ''
+    priority: 0,
+    userId: ''
   })
 
   // handle change is temporarily holding the information
   const handleChange = (e) => {
-    e.preventDefault()
-    setNewTicket(e.target.value)
+    const newData = { ...newTicket }
+    newData[e.target.id] = e.target.value
+    setNewTicket(newData)
+    console.log(newData)
+  }
+  const handlePriority = (e) => {
+    const newData = { ...newTicket }
+    newData[e.target.id] = e.target.value
+    setNewTicket(newData)
+    console.log(newData)
   }
   // handle submit to take the data and post to back end
   const handleSubmit = async (e) => {
     e.preventDefault()
-    Client.post('/createTicket', newTicket)
-      .then(function (response) {
-        console.log(response)
-      })
-      .catch(function (error) {
-        console.log(error)
-      })
+    Client.post('/tickets/createTicket', {
+      ticketTitle: newTicket.ticketTitle,
+      ticketDescription: newTicket.ticketDescription,
+      priority: newTicket.priority,
+      userId: newTicket.userId
+    }).then((res) => {
+      console.log(res.data)
+    })
   }
 
   return (
     <form
       className="bg-white w-screen text-base flex flex-col mt-5"
-      onSubmit={handleSubmit}
+      onSubmit={(e) => handleSubmit(e)}
     >
       <div>
         <p className="p-5 text-center bg-purple-400 text-4xl text-gray-600 ">
@@ -45,7 +55,8 @@ const Newticket = () => {
           type="text"
           name="ticketTitle"
           value={newTicket.ticketTitle}
-          onChange={handleChange}
+          onChange={(e) => handleChange(e)}
+          id="ticketTitle"
         ></input>
       </div>
       {/* New bug form */}
@@ -55,18 +66,22 @@ const Newticket = () => {
           placeholder="Describe in detail new bug/issue"
           name="ticketDescription"
           value={newTicket.ticketDescription}
-          onChange={handleChange}
+          onChange={(e) => handleChange(e)}
+          id="ticketDescription"
+          type="text"
         ></input>
         {/* Priority level */}
         <div>
           <p className="mx-auto border-2 bg-white flex">Priority Level</p>
-          <select className="text-center mt-11 w-3/4 text-xl">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
+          <input
+            className="bg-white  shadow border h-40 w-1/2 mx-auto"
+            placeholder="Describe in detail new bug/issue"
+            name="priority"
+            value={parseInt(newTicket.priority)}
+            onChange={(e) => handleChange(e)}
+            id="priority"
+            type="number"
+          ></input>
         </div>
         <button
           type="submit"
