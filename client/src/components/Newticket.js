@@ -3,9 +3,12 @@ import React, { useState, useEffect } from 'react'
 import { BsPlusCircleFill } from 'react-icons/bs'
 import Currenttickets from './Currenttickets'
 import Client from '../services/api'
-const Newticket = (props) => {
+const Newticket = () => {
   return (
-    <form class="bg-white w-screen text-base flex flex-col">
+    <form class="bg-white w-screen text-base flex flex-col mt-5">
+      <p class="p-5 text-center bg-purple-400 text-4xl text-gray-600 ">
+        Submit a new Ticket
+      </p>
       {/* Ticket Title */}
       <div class="flex border  titleContainer">
         <input
@@ -37,7 +40,7 @@ const Newticket = (props) => {
           <BsPlusCircleFill />
         </button>
       </div>
-      <div class="flex bg-pink-100">
+      <div class="flex bg-pink-100 mt-5">
         <Currenttickets />
       </div>
     </form>
