@@ -54,9 +54,6 @@ const Newticket = (props) => {
         <AnimatePresence>
           {show ? (
             <motion.form
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
               className="text-sm w-1/2 mx-auto border-2 p-10 text-left"
               onSubmit={(e) => handleSubmit(e)}
             >

@@ -6,7 +6,7 @@
   background-size: 100% auto;
 }
 .login {
-  background: url('https://images.unsplash.com/photo-1504083898675-c896ecdae86e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1527&q=80');
+  background: url(https://images.unsplash.com/photo-1493612276216-ee3925520721?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1364&q=80);
   margin: 0;
   padding: 0;
   background-size: 100% auto;
@@ -20,9 +20,9 @@ body {
 }
 .navbar {
   font-family: 'Zen Tokyo Zoo', cursive;
-  background-color: rgb(203, 193, 209);
+  background-color: rgb(216, 197, 214);
 }
 
 ::-webkit-input-placeholder {
-  text-align: center;
+  text-align: left;
 }

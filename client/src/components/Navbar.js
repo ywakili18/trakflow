@@ -13,13 +13,13 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
           animate={{ y: 0 }}
           exit={{ y: -300 }}
           transition={{ type: 'tween', duration: 0.5 }}
-          className=" text-white  flex navbar justify-around text-2xl"
+          className="text-white  flex navbar justify-around text-lg sm:text-3xl"
         >
           <div className="flex">
             <NavLink
               className=" 
-        hover:bg-indigo-800
-        hover:text-purple-300
+        hover:bg-red-200
+        hover:text-purple-500
         transition-all  p-8 underline"
               to="/login"
             >
@@ -71,22 +71,23 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
       animate={{ x: 0 }}
       exit={{ x: -300 }}
       transition={{ type: 'tween', duration: 0.5 }}
-      className="flex navbar text-white justify-between text-2xl"
+      className=" text-white flex navbar justify-around text-lg sm:text-2xl"
     >
-      <div className="flex">
+      <div className="flex text-lg sm:text-3xl mt-5">
         <NavLink
           className=" 
-        hover:text-yellow-600
-        transition-all mx-auto p-8 flex "
+          hover:bg-red-200
+        hover:text-purple-500
+        transition-all flex p-2 underline "
           to="/dashboard"
         >
           dashboard
-          <MdOutlineDashboardCustomize className="text-lg sm:text-2xl sm:mt-1" />
         </NavLink>
         <NavLink
           className=" 
-        hover:text-blue-600
-        transition-all mx-auto p-8"
+          hover:bg-red-200
+          hover:text-purple-500
+          transition-all flex p-2 underline "
           onClick={handleLogOut}
           to="/login"
         >
@@ -94,9 +95,9 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
         </NavLink>
         <NavLink
           className=" 
-        
-        hover:text-red-600 
-        transition-all mx-auto p-8"
+          hover:bg-red-200
+          hover:text-purple-500
+          transition-all flex p-2 underline "
           to="/about"
         >
           about
@@ -104,7 +105,10 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
       </div>
 
       <div>
-        <NavLink className=" transition-all flex text-gray-500" to="/dashboard">
+        <NavLink
+          className="hover:text-pink-700 transition-all flex text-pink-100"
+          to="/dashboard"
+        >
           <CgPacman className="text-7xl sm:text-8xl" />
           <button
             className="mr-4 

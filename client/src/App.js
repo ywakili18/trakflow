@@ -36,13 +36,7 @@ function App() {
 
   return (
     <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ type: 'spring', duration: 3 }}
-        className="text-6xl"
-      >
+      <motion.div>
         <Navbar
           authenticated={authenticated}
           user={user}

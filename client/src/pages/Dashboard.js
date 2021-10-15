@@ -7,20 +7,20 @@ const Dashboard = (props) => {
     <AnimatePresence>
       <motion.div className="">
         <motion.div
-          initial={{ y: -300, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 300, opacity: 0 }}
-          transition={{ type: 'spring', duration: 2 }}
+          initial={{ x: -300 }}
+          animate={{ x: 0 }}
+          exit={{ x: 300 }}
+          transition={{ type: 'tween', duration: 1 }}
           className=""
         >
           <Newticket {...props} />
         </motion.div>
 
         <motion.div
-          initial={{ y: 300, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -300, opacity: 0 }}
-          transition={{ type: 'spring', duration: 2 }}
+          initial={{ x: 300 }}
+          animate={{ x: 0 }}
+          exit={{ x: -300 }}
+          transition={{ type: 'tween', duration: 1 }}
           className="bg-pink-100"
         >
           <Currenttickets {...props} />
