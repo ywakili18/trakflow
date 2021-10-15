@@ -4,9 +4,7 @@ import { useHistory } from 'react-router'
 const Currenttickets = (props) => {
   const [tickets, setTickets] = useState([])
 
-  // I need to have onClick button which will send user to Editticketpage.js
-  // as /updateticket page. I will then need to pass in the userId state
-  // into the updateTicketpage.
+  // I need a click handler that will submit a delete request.
 
   useEffect(() => {
     async function getTickets() {
@@ -48,7 +46,15 @@ const Currenttickets = (props) => {
               >
                 edit ticket
               </button>
-              <button className="border-2 text-2xl bg-blue-500 text-white rounded-2xl p-2 h-1/2 hover:bg-red-500 mt-10">
+              <button
+                onClick={function handleDelete(e) {
+                  e.preventDefault()
+                  Client.delete(`/tickets/${ticket.id}`).then((res) => {
+                    console.log(res.data)
+                  })
+                }}
+                className="border-2 text-2xl bg-blue-500 text-white rounded-2xl p-2 h-1/2 hover:bg-red-500 mt-10"
+              >
                 close ticket
               </button>
             </div>
