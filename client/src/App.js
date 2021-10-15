@@ -55,7 +55,7 @@ function App() {
           <ProtectedRoute
             authenticated={authenticated}
             user={user}
-            path="/edit_ticket"
+            path="/tickets/:ticketId"
             component={Editticketpage}
           />
         )}
