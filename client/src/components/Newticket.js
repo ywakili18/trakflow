@@ -52,11 +52,17 @@ const Newticket = (props) => {
         <AnimatePresence>
           {show ? (
             <motion.form
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               className="text-sm w-1/2 mx-auto border-2 p-10 text-left"
               onSubmit={(e) => handleSubmit(e)}
             >
               {/* Ticket Title */}
               <div>
+                <p class="text-2xl text-center text-red-800 underline">
+                  New Ticket Request
+                </p>
                 <div className="mt-1 flex flex-col text-blue-500 ">
                   <span className="text font-bold">Title</span>
                   <input

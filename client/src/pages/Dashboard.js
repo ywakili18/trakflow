@@ -6,10 +6,16 @@ const Dashboard = (props) => {
   return (
     <AnimatePresence>
       <motion.div className="">
-        {/* <header class="border h-screen w-2/5 text-2xl text-center">
-        Dashboard
-      </header> */}
-        <Newticket {...props} />
+        <motion.div
+          initial={{ y: -300, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 300, opacity: 0 }}
+          transition={{ type: 'spring', duration: 0.8 }}
+          className=""
+        >
+          <Newticket {...props} />
+        </motion.div>
+
         <motion.div
           initial={{ y: 300, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
