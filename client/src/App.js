@@ -67,7 +67,7 @@ function App() {
             />
           )}
           <Route
-            path="/"
+            path="/login"
             component={(props) => (
               <Loginform
                 {...props}

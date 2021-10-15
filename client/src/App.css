@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Manrope:wght@200;300;400;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
 .register {
   background: url('https://images.unsplash.com/photo-1514675239066-bd9d6d21c926?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1287&q=80');
   margin: 0;
@@ -6,7 +6,7 @@
   background-size: 100% auto;
 }
 .login {
-  background: url('https://images.unsplash.com/photo-1555679427-1f6dfcce943b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1335&q=80');
+  background: url('https://images.unsplash.com/photo-1504083898675-c896ecdae86e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1527&q=80');
   margin: 0;
   padding: 0;
   background-size: 100% auto;
@@ -17,10 +17,10 @@ body {
   max-width: 100%;
   height: auto;
   background-color: #ffffff;
-  font-family: 'Manrope', sans-serif;
 }
 .navbar {
-  font-family: 'Bungee Shade', cursive;
+  font-family: 'Zen Tokyo Zoo', cursive;
+  background-color: rgb(218, 191, 235);
 }
 
 ::-webkit-input-placeholder {

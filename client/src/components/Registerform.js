@@ -45,7 +45,7 @@ export default function Registerform(props) {
             initial={{ x: -300, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: 300, opacity: 0 }}
-            transition={{ type: 'spring', duration: 2 }}
+            transition={{ type: 'spring', duration: 1 }}
             class="w-1/2 bg-blue-100 text-gray-800  px-4 py-6 flex flex-col justify-center"
           >
             <div class="mx-auto text-center">
@@ -145,7 +145,7 @@ export default function Registerform(props) {
             initial={{ x: 300, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -300, opacity: 0 }}
-            transition={{ type: 'spring', duration: 2 }}
+            transition={{ type: 'spring', duration: 1 }}
             class="register w-1/2 "
           ></motion.div>
         </div>

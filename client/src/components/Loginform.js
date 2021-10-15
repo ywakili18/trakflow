@@ -26,7 +26,7 @@ const Loginform = (props) => {
             initial={{ x: -300, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: 300, opacity: 0 }}
-            transition={{ type: 'spring', duration: 2 }}
+            transition={{ type: 'spring', duration: 1 }}
             className="login w-1/2 "
           ></motion.div>
           {/* Login form container */}
@@ -34,8 +34,8 @@ const Loginform = (props) => {
             initial={{ x: 300, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -300, opacity: 0 }}
-            transition={{ type: 'spring', duration: 2 }}
-            className="w-1/2 bg-pink-100 text-gray-800  px-4 py-6 flex flex-col justify-center"
+            transition={{ type: 'spring', duration: 1 }}
+            className="w-1/2 bg-indigo-100 text-gray-800  px-4 py-6 flex flex-col justify-center"
           >
             <div className="mx-auto text-center">
               <p className="text-2xl font-light">Login to your account</p>
