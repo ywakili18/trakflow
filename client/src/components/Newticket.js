@@ -11,6 +11,7 @@ const Newticket = (props) => {
     userId: props.user.id
   })
   const [show, setShow] = useState(true)
+
   // handle change is temporarily holding the information
   const handleChange = (e) => {
     e.preventDefault()
@@ -46,7 +47,8 @@ const Newticket = (props) => {
             focus:shadow-outline 
             hover:bg-pink-800 py-2 px-4 rounded-lg flex"
         >
-          Submit a new ticket request
+          {show ? 'Cancel' : 'Submit a new ticket request'}
+
           <HiOutlineTicket className="text-xl mt-1 ml-2" />
         </button>
         <AnimatePresence>
