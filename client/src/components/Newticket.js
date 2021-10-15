@@ -28,18 +28,18 @@ const Newticket = (props) => {
       userId: newTicket.userId
     }).then((res) => {
       console.log(res.data)
+      window.location.reload()
     })
   }
 
   return (
     <form
-      className="bg-white w-screen text-base flex flex-col mt-5"
+      className="text-base w-1/2 mx-auto border-8 rounded-2xl p-5 bg-red-50"
       onSubmit={(e) => handleSubmit(e)}
     >
-      <div>
-        <p className="p-5 text-center bg-purple-400 text-4xl text-gray-600 ">
-          Submit a new Ticket
-        </p>
+      {/* Title */}
+      <div className="text-center bg-purple-400 text-sm  text-gray-600 p-2 border-2">
+        <p className="">Submit a new Ticket</p>
       </div>
 
       {/* Ticket Title */}
@@ -85,9 +85,6 @@ const Newticket = (props) => {
           <BsPlusCircleFill />
         </button>
       </div>
-      {/* <div className="flex bg-pink-100 mt-5">
-        <Currenttickets />
-      </div> */}
     </form>
   )
 }

@@ -3,9 +3,6 @@ import Client from '../services/api'
 import { useHistory } from 'react-router'
 const Currenttickets = (props) => {
   const [tickets, setTickets] = useState([])
-
-  // I need a click handler that will submit a delete request.
-
   useEffect(() => {
     async function getTickets() {
       const res = await Client.get('/tickets')
@@ -17,9 +14,9 @@ const Currenttickets = (props) => {
   const history = useHistory()
 
   return (
-    <div className="text-lg flex">
+    <div className="text-lg">
       <div className="border">
-        <p className="p-5 text-center bg-pink-100 text-4xl text-gray-600 ">
+        <p className="p-5 text-center bg-pink-500 text-2xl text-gray-600 ">
           Open Tickets
         </p>
 
@@ -27,7 +24,7 @@ const Currenttickets = (props) => {
           <div
             key={ticket.id}
             id={ticket.id}
-            className="border bg-pink-50 p-5 w-screen flex"
+            className="border bg-pink-50 p-5  flex"
           >
             <div className="border-4 bg-green-50 mx-auto p-5 w-3/4">
               <p>Title: {ticket.ticketTitle}</p>
