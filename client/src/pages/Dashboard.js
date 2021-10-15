@@ -10,7 +10,7 @@ const Dashboard = (props) => {
           initial={{ y: -300, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 300, opacity: 0 }}
-          transition={{ type: 'spring', duration: 0.8 }}
+          transition={{ type: 'spring', duration: 2 }}
           className=""
         >
           <Newticket {...props} />
@@ -20,7 +20,7 @@ const Dashboard = (props) => {
           initial={{ y: 300, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -300, opacity: 0 }}
-          transition={{ type: 'spring', duration: 0.8 }}
+          transition={{ type: 'spring', duration: 2 }}
           className="bg-pink-100"
         >
           <Currenttickets {...props} />
