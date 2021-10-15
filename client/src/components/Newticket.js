@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FcLeftUp2 } from 'react-icons/fc'
 import { HiOutlineTicket } from 'react-icons/hi'
 import Client from '../services/api'
-
+import { motion } from 'framer-motion'
 const Newticket = (props) => {
   const [newTicket, setNewTicket] = useState({
     ticketTitle: '',
@@ -50,13 +50,15 @@ const Newticket = (props) => {
           <HiOutlineTicket className="text-xl mt-1 ml-2" />
         </button>
         {show ? (
-          <form
+          <motion.form
+            animate={{ rotate: 180 }}
+            transition={{ from: 90, duration: 2 }}
             className="text-sm w-1/2 mx-auto border-2 p-10 text-left"
             onSubmit={(e) => handleSubmit(e)}
           >
             {/* Ticket Title */}
             <div>
-              <div className="mt-1 flex flex-col ">
+              <div className="mt-1 flex flex-col text-blue-500 ">
                 <span className="text font-bold">Title</span>
                 <input
                   className="focus:ring-indigo-500 
@@ -73,7 +75,7 @@ const Newticket = (props) => {
               </div>
             </div>
             {/* New bug form */}
-            <div className="flex-col mt-5 ">
+            <div className="flex-col mt-5 text-blue-500">
               <div>
                 <span className="text font-bold">Ticket Description</span>
               </div>
@@ -121,7 +123,7 @@ const Newticket = (props) => {
                 </button>
               </div>
             </div>
-          </form>
+          </motion.form>
         ) : null}
       </div>
     </div>
