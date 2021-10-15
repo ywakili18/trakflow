@@ -9,10 +9,10 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
     unauthenticatedOptions = (
       <AnimatePresence>
         <motion.nav
-          initial={{ y: -300, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -300, opacity: 0 }}
-          transition={{ type: 'spring', duration: 1 }}
+          initial={{ y: -300 }}
+          animate={{ y: 0 }}
+          exit={{ y: -300 }}
+          transition={{ type: 'tween', duration: 0.5 }}
           className=" text-white  flex navbar justify-around text-2xl"
         >
           <div className="flex">
@@ -66,7 +66,13 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
   }
 
   const authenticatedOptions = (
-    <nav className="flex navbar  justify-between text-2xl">
+    <motion.nav
+      initial={{ x: -300 }}
+      animate={{ x: 0 }}
+      exit={{ x: -300 }}
+      transition={{ type: 'tween', duration: 0.5 }}
+      className="flex navbar text-white justify-between text-2xl"
+    >
       <div className="flex">
         <NavLink
           className=" 
@@ -74,7 +80,7 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
         transition-all mx-auto p-8 flex "
           to="/dashboard"
         >
-          Dashboard
+          dashboard
           <MdOutlineDashboardCustomize className="text-lg sm:text-2xl sm:mt-1" />
         </NavLink>
         <NavLink
@@ -84,7 +90,7 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
           onClick={handleLogOut}
           to="/login"
         >
-          Logout
+          logout
         </NavLink>
         <NavLink
           className=" 
@@ -93,17 +99,22 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
         transition-all mx-auto p-8"
           to="/about"
         >
-          About
+          about
         </NavLink>
       </div>
 
       <div>
         <NavLink className=" transition-all flex text-gray-500" to="/dashboard">
           <CgPacman className="text-7xl sm:text-8xl" />
-          <button className="mr-4">TrakFlow</button>
+          <button
+            className="mr-4 
+            text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-500 text-3xl"
+          >
+            trakflow
+          </button>
         </NavLink>
       </div>
-    </nav>
+    </motion.nav>
   )
   return (
     <div>

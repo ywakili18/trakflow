@@ -16,11 +16,11 @@ body {
   padding: 0;
   max-width: 100%;
   height: auto;
-  background-color: #ffffff;
+  background-color: #dad3dc;
 }
 .navbar {
   font-family: 'Zen Tokyo Zoo', cursive;
-  background-color: rgb(218, 191, 235);
+  background-color: rgb(203, 193, 209);
 }
 
 ::-webkit-input-placeholder {
