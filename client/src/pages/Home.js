@@ -26,33 +26,36 @@ const Home = () => {
             Trakflow
           </h1>
         </div>{' '}
-        <div class="mt-10 p-5 text-red-400">
+        <div class="mt-10 p-5 text-red-400 text-2xl md:text-4xl font-bold">
           <p>A simple bug tracker application.</p>
           <p class="mt-2 sm:mt-0">Made to solve your problems, a bit easier.</p>
-          <button
-            className="border-2 
-          text-2xl bg-blue-200
-          text-white rounded-2xl p-4 
+          {/* LOGIN-BUTTON */}
+          <div class="flex mt-10 text-base sm:text-2xl">
+            <button
+              className="border-2 
+               bg-blue-200
+              text-white rounded-2xl p-2 sm:p-4
+              hover:bg-purple-200 
+              hover:text-pink-400"
+              onClick={function handleClick(e) {
+                history.push(`/login`)
+              }}
+            >
+              Login
+            </button>
+            <button
+              className="border-2 
+          bg-pink-200
+          text-white rounded-2xl p-2 sm:p-4
           hover:bg-purple-200 
-          hover:text-pink-400 mt-10"
-            onClick={function handleClick(e) {
-              history.push(`/login`)
-            }}
-          >
-            Login
-          </button>
-          <button
-            className="border-2 
-          text-2xl bg-pink-200
-          text-white rounded-2xl p-4 
-          hover:bg-purple-200 
-          hover:text-pink-400 mt-10 ml-5"
-            onClick={function handleClick(e) {
-              history.push(`/register`)
-            }}
-          >
-            New to Trakflow? Sign up here!
-          </button>
+          hover:text-pink-400 ml-5"
+              onClick={function handleClick(e) {
+                history.push(`/register`)
+              }}
+            >
+              New to Trakflow? Sign up here!
+            </button>
+          </div>
         </div>
       </motion.div>
     </motion.div>
