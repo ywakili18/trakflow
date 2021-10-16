@@ -50,6 +50,7 @@ const Loginform = (props) => {
                 </span>{' '}
                 account
               </p>
+              {/* input form container */}
               <div className=" mt-4 bg-white rounded-lg text-left text-xs sm-text-2xl">
                 <form className="p-2 sm:p-8" onSubmit={handleSubmit}>
                   <label className="block font-semibold">Email</label>

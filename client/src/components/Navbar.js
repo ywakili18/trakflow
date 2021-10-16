@@ -47,7 +47,7 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
           <div>
             <NavLink
               className="hover:text-indigo-400 transition-all flex text-pink-100"
-              to="/login"
+              to="/"
             >
               <CgPacman className="text-4xl sm:text-7xl lg:text-8xl mt-4 sm:mt-4 lg:mt-1" />
               <button

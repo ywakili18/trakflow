@@ -40,22 +40,37 @@ export default function Registerform(props) {
     <AnimatePresence>
       <div>
         <div class="flex min-h-screen">
+          <motion.div
+            initial={{ x: 300 }}
+            animate={{ x: 0 }}
+            exit={{ x: -300 }}
+            transition={{ type: 'tween', duration: 0.5 }}
+            className=" w-1/2 register "
+          ></motion.div>
           {/* Register form container */}
           <motion.div
             initial={{ x: -300 }}
             animate={{ x: 0 }}
             exit={{ x: 300 }}
             transition={{ type: 'tween', duration: 0.5 }}
-            class="w-1/2 bg-blue-100 text-gray-800  px-4 py-6 flex flex-col justify-center"
+            class="w-1/2 
+            bg-gradient-to-b from-red-200 via-blue-200 to-blue-400 
+            text-gray-800  
+            px-4 py-6 flex flex-col 
+            justify-center"
           >
-            <div class="mx-auto text-center">
-              <p class="text-2xl font-light tracking-wider">
-                Register your account
+            <div class="mx-auto text-center w-full sm:w-auto">
+              <p className="text-sm sm:text-2xl  text-gray-500">
+                Register and use{' '}
+                <span class="font-bold text-indigo-400 underline">
+                  Trakflow
+                </span>{' '}
+                today
               </p>
               {/* input form container */}
-              <div class=" mt-4 bg-white shadow-2xl sm:rounded-lg text-left text-sm">
+              <div class=" mt-4 bg-white rounded-lg text-left text-xs sm-text-2xl">
                 {/* Email */}
-                <form class="py-6 px-8" onSubmit={handleSubmit}>
+                <form class="p-2 sm:p-8" onSubmit={handleSubmit}>
                   <label class="block font-semibold" htmlFor="email">
                     Enter Email
                   </label>
@@ -66,7 +81,13 @@ export default function Registerform(props) {
                     placeholder="example@example.com"
                     value={formValues.email}
                     required
-                    class=" border h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
+                    class=" 
+                    border w-full h-5 
+                    px-2 py-4 mt-2 
+                    hover:outline-none 
+                    focus:outline-none 
+                    focus:ring-1 focus:ring-indigo-600 
+                    rounded-md"
                   />
                   {/* Username */}
                   <label class="block font-semibold mt-4">Enter Username</label>
@@ -77,7 +98,12 @@ export default function Registerform(props) {
                     placeholder="Username"
                     value={formValues.userName}
                     required
-                    class=" border h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
+                    class="border w-full h-5 
+                    px-2 py-4 mt-2 
+                    hover:outline-none 
+                    focus:outline-none 
+                    focus:ring-1 focus:ring-indigo-600 
+                    rounded-md"
                   />
                   {/* Password */}
                   <label class="block mt-3 font-semibold" htmlFor="password">
@@ -87,9 +113,15 @@ export default function Registerform(props) {
                     onChange={handleChange}
                     type="password"
                     name="password"
+                    placeholder="Enter Password"
                     value={formValues.password}
                     required
-                    class=" border w-full h-5 px-2 py-4 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
+                    class="border w-full h-5 
+                    px-2 py-4 mt-2 
+                    hover:outline-none 
+                    focus:outline-none 
+                    focus:ring-1 focus:ring-indigo-600 
+                    rounded-md"
                   />
                   {/* Confirm Password */}
                   <label
@@ -103,8 +135,14 @@ export default function Registerform(props) {
                     type="password"
                     name="confirmPassword"
                     value={formValues.confirmPassword}
+                    placeholder="Confirm Password"
                     required
-                    class=" border w-full h-5 px-2 py-4 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
+                    class="border w-full h-5 
+                    px-2 py-4 mt-2 
+                    hover:outline-none 
+                    focus:outline-none 
+                    focus:ring-1 focus:ring-indigo-600 
+                    rounded-md"
                   />
                   {/* Role */}
                   <label class="block mt-3 font-semibold">Your role</label>
@@ -115,7 +153,12 @@ export default function Registerform(props) {
                     placeholder="ex: Jr.Dev, UX/UI designer"
                     value={formValues.role}
                     required
-                    class=" border w-full h-5 px-2 py-4 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
+                    class="border w-full h-5 
+                    px-2 py-4 mt-2 
+                    hover:outline-none 
+                    focus:outline-none 
+                    focus:ring-1 focus:ring-indigo-600 
+                    rounded-md"
                   />
                   {/* Register Button */}
                   <div class="flex justify-between items-baseline">
@@ -141,13 +184,6 @@ export default function Registerform(props) {
             </div>
           </motion.div>
           {/* image container */}
-          <motion.div
-            initial={{ x: 300 }}
-            animate={{ x: 0 }}
-            exit={{ x: -300 }}
-            transition={{ type: 'tween', duration: 0.5 }}
-            class="register w-1/2 "
-          ></motion.div>
         </div>
       </div>
     </AnimatePresence>
