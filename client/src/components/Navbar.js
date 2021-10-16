@@ -17,8 +17,8 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
           <div className="flex text-lg sm:text-3xl md:text-4xl">
             <NavLink
               className="
-              hover:bg-red-200
-              hover:text-purple-500
+              hover:bg-purple-200
+              hover:text-blue-400
               transition-all flex p-2 underline "
               to="/login"
             >
@@ -26,7 +26,7 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
             </NavLink>
             <NavLink
               className=" 
-              hover:bg-red-200
+              hover:bg-green-200
           hover:text-purple-500
           transition-all flex p-2 underline "
               to="/register"
@@ -46,7 +46,7 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
 
           <div>
             <NavLink
-              className="hover:text-pink-700 transition-all flex text-pink-100"
+              className="hover:text-indigo-400 transition-all flex text-pink-100"
               to="/login"
             >
               <CgPacman className="text-4xl sm:text-7xl lg:text-8xl mt-4 sm:mt-4 lg:mt-1" />
@@ -76,18 +76,18 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
       <div className="flex text-lg sm:text-3xl md:text-4xl">
         <NavLink
           className=" 
-          hover:bg-red-200
-        hover:text-purple-500
-        transition-all flex p-2 underline "
+          hover:bg-green-200
+          hover:text-purple-500
+          transition-all flex p-2 underline "
           to="/dashboard"
         >
           <span class="mt-2 sm:mt-5">dashboard</span>
         </NavLink>
         <NavLink
           className=" 
-          hover:bg-red-200
-          hover:text-purple-500
-          transition-all flex p-2 underline "
+          hover:bg-purple-200
+          hover:text-blue-400
+          transition-all flex p-2 underline  "
           onClick={handleLogOut}
           to="/login"
         >
