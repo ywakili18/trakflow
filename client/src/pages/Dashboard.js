@@ -10,7 +10,7 @@ const Dashboard = (props) => {
         animate={{ x: 0 }}
         exit={{ x: 300 }}
         transition={{ type: 'tween' }}
-        className=""
+        className="flex justify-between"
       >
         <motion.div
           initial={{ x: -300 }}

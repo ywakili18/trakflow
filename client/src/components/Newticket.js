@@ -15,7 +15,6 @@ const Newticket = (props) => {
 
   // handle change is temporarily holding the information
   const handleChange = (e) => {
-    e.preventDefault()
     const newData = { ...newTicket }
     newData[e.target.name] = e.target.value
     setNewTicket(newData)
@@ -36,7 +35,7 @@ const Newticket = (props) => {
   }
 
   return (
-    <div class="flex p-10 bg-gray-300 ">
+    <div class=" bg-gray-300 ">
       {/* Title */}
       <div
         className="
@@ -71,7 +70,7 @@ const Newticket = (props) => {
               exit={{ opacity: 0 }}
               className="text-sm  
               mx-auto border-2 border-white 
-              bg-gray-200 p-10 mt-5  fixed inset-0 form
+              bg-purple-50 p-10 mt-5  fixed inset-0 form
               text-left"
               onSubmit={(e) => handleSubmit(e)}
             >
@@ -88,10 +87,11 @@ const Newticket = (props) => {
                 <div className="mt-1 flex flex-col text-blue-500 ">
                   <span className="text font-light">Subject</span>
                   <input
-                    className="focus:ring-indigo-500 
-              focus:border-indigo-500 flex  
-              shadow-xl border
-              sm:text-sm bg-purple-50 p-2"
+                    className="
+                    focus:ring-indigo-500 
+                    focus:border-indigo-500 flex  
+                    shadow-xl border
+                    sm:text-sm bg-purple-50 p-2"
                     placeholder="Regarding #23..."
                     type="text"
                     name="ticketTitle"
@@ -134,7 +134,7 @@ const Newticket = (props) => {
                       className="
                       flex 
                       shadow 
-                      border 
+                      border form-radio
                       mt-2"
                       name="priority"
                       value="High"
