@@ -20,7 +20,7 @@ const Loginform = (props) => {
   return (
     <AnimatePresence>
       <div>
-        <div className="flex min-h-screen">
+        <div className="flex h-screen">
           {/* image container */}
           <motion.div
             initial={{ x: -300 }}
@@ -35,27 +35,33 @@ const Loginform = (props) => {
             animate={{ x: 0 }}
             exit={{ x: -300 }}
             transition={{ type: 'tween', duration: 0.5 }}
-            className="w-1/2 bg-gradient-to-b from-blue-200 via-red-200 to-red-400 text-gray-800  px-4 py-6 flex flex-col justify-center"
+            className="w-1/2 
+            bg-gradient-to-b from-blue-200 via-red-200 to-red-400 
+            text-gray-800  
+            px-4 py-6 flex flex-col 
+            justify-center"
           >
-            <div className="mx-auto text-center">
-              <p className="text-2xl font-light text-gray-500">
+            {/* form text */}
+            <div className="mx-auto text-center w-full sm:w-auto">
+              <p className="text-sm sm:text-2xl  text-gray-500">
                 Login to your{' '}
                 <span class="font-bold text-indigo-400 underline">
                   Trafklow
                 </span>{' '}
                 account
               </p>
-              <div className=" mt-4 bg-white shadow-2xl sm:rounded-lg text-left text-sm">
-                <form className="py-6 px-8" onSubmit={handleSubmit}>
+              <div className=" mt-4 bg-white rounded-lg text-left text-xs sm-text-2xl">
+                <form className="p-2 sm:p-8" onSubmit={handleSubmit}>
                   <label className="block font-semibold">Email</label>
                   <input
                     onChange={handleChange}
                     name="email"
                     type="email"
-                    placeholder="example@example.com"
+                    placeholder="Enter email here..."
                     value={formValues.email}
                     required
-                    className=" border h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
+                    className=" 
+                    border w-full h-5 px-2 py-4 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
                   />
                   <label className="block mt-3 font-semibold">Password</label>
                   <input
@@ -65,9 +71,15 @@ const Loginform = (props) => {
                     value={formValues.password}
                     placeholder="Enter password here"
                     required
-                    className=" border w-full h-5 px-2 py-4 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
+                    className=" 
+                    border w-full h-5 
+                    px-2 py-4 mt-2 
+                    hover:outline-none 
+                    focus:outline-none 
+                    focus:ring-1 focus:ring-indigo-600 
+                    rounded-md"
                   />
-                  <div className="flex justify-between items-baseline">
+                  <div className="flex justify-between">
                     <button
                       className="mt-4 text-indigo-100 
                         transition-colors 
@@ -79,7 +91,7 @@ const Loginform = (props) => {
                     >
                       Login
                     </button>
-                    <p className="text-sm hover:underline p-4">
+                    <p className="text-xs hover:underline mt-5 ml-3">
                       Forgot password?
                     </p>
                   </div>
