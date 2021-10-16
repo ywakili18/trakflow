@@ -10,7 +10,7 @@ const Dashboard = (props) => {
         animate={{ x: 0 }}
         exit={{ x: 300 }}
         transition={{ type: 'tween' }}
-        className="flex justify-between"
+        className="justify-between"
       >
         <motion.div
           initial={{ x: -300 }}
@@ -21,6 +21,7 @@ const Dashboard = (props) => {
         >
           <Newticket {...props} />
         </motion.div>
+        {/* Current  */}
         <motion.div initial={{ x: -300 }} animate={{ x: 0 }} exit={{ x: 300 }}>
           <motion.div
             initial={{ x: 300 }}
