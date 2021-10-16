@@ -22,7 +22,16 @@ body {
   font-family: 'Zen Tokyo Zoo', cursive;
   background-color: rgb(216, 197, 214);
 }
-
+.home {
+  background-color: rgb(35, 66, 131);
+  background: url(https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
 ::-webkit-input-placeholder {
   text-align: left;
 }
