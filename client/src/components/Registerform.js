@@ -41,17 +41,17 @@ export default function Registerform(props) {
       <div>
         <div class="flex min-h-screen">
           <motion.div
-            initial={{ x: 300 }}
+            initial={{ x: -300 }}
             animate={{ x: 0 }}
-            exit={{ x: -300 }}
+            exit={{ y: 300 }}
             transition={{ type: 'tween', duration: 0.5 }}
             className=" w-1/2 register "
           ></motion.div>
           {/* Register form container */}
           <motion.div
-            initial={{ x: -300 }}
+            initial={{ x: 300 }}
             animate={{ x: 0 }}
-            exit={{ x: 300 }}
+            exit={{ x: -300 }}
             transition={{ type: 'tween', duration: 0.5 }}
             class="w-1/2 
             bg-gradient-to-b from-red-200 via-blue-200 to-blue-400 

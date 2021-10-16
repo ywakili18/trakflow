@@ -34,3 +34,6 @@ body {
 ::-webkit-input-placeholder {
   text-align: left;
 }
+.form {
+  height: 80%;
+}

@@ -3,14 +3,15 @@ import { FcLeftUp2 } from 'react-icons/fc'
 import { HiOutlineTicket } from 'react-icons/hi'
 import Client from '../services/api'
 import { motion, AnimatePresence } from 'framer-motion'
+
 const Newticket = (props) => {
   const [newTicket, setNewTicket] = useState({
     ticketTitle: '',
     ticketDescription: '',
-    priority: 0,
+    priority: '',
     userId: props.user.id
   })
-  const [show, setShow] = useState(true)
+  const [show, setShow] = useState(false)
 
   // handle change is temporarily holding the information
   const handleChange = (e) => {
@@ -35,53 +36,76 @@ const Newticket = (props) => {
   }
 
   return (
-    <div class="">
+    <div class="flex p-10 bg-gray-300 ">
       {/* Title */}
-      <div className="text-center text-sm font-bold  text-pink-800  p-2 border-2 flex justify-evenly">
-        <button
-          onClick={() => setShow(!show)}
-          className="mt-4 text-indigo-900 
+      <div
+        className="
+          mx-auto
+          text-center 
+          text-sm font-bold  
+          w-full"
+      >
+        <div>
+          <button
+            onClick={() => setShow(!show)}
+            className="
+            text-indigo-900 
             transition-colors 
             duration-150 
             bg-purple-100 rounded-lg 
             focus:shadow-outline 
-            hover:bg-pink-800 py-2 px-4 rounded-lg flex"
-        >
-          {show ? 'Cancel' : 'Submit a new ticket request'}
+            hover:bg-pink-800 py-2 px-4 rounded-lg"
+          >
+            {show ? 'Cancel' : 'Submit a new ticket request'}
 
-          <HiOutlineTicket className="text-xl mt-1 ml-2" />
-        </button>
+            <HiOutlineTicket className="text-xl" />
+          </button>
+        </div>
+
         <AnimatePresence>
           {show ? (
+            // form container
             <motion.form
-              className="text-sm w-1/2 mx-auto border-2 p-10 text-left"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="text-sm  
+              mx-auto border-2 border-white 
+              bg-gray-200 p-10 mt-5  fixed inset-0 form
+              text-left"
               onSubmit={(e) => handleSubmit(e)}
             >
               {/* Ticket Title */}
-              <div>
-                <p class="text-2xl text-center text-red-800 underline">
+              <div className="">
+                <div
+                  class="
+                text-sm sm:text-2xl 
+                text-center text-blue-500 font-black
+                underline"
+                >
                   New Ticket Request
-                </p>
+                </div>
                 <div className="mt-1 flex flex-col text-blue-500 ">
-                  <span className="text font-bold">Title</span>
+                  <span className="text font-light">Subject</span>
                   <input
                     className="focus:ring-indigo-500 
               focus:border-indigo-500 flex  
               shadow-xl border
               sm:text-sm bg-purple-50 p-2"
-                    placeholder="Enter new ticket title"
+                    placeholder="Regarding #23..."
                     type="text"
                     name="ticketTitle"
                     value={newTicket.ticketTitle}
                     onChange={(e) => handleChange(e)}
                     id="ticketTitle"
+                    required
                   ></input>
                 </div>
               </div>
               {/* New bug form */}
               <div className="flex-col mt-5 text-blue-500">
                 <div>
-                  <span className="text font-bold">Ticket Description</span>
+                  <span className="text font-light">Description</span>
                 </div>
 
                 <div className="flex">
@@ -90,29 +114,60 @@ const Newticket = (props) => {
               focus:border-indigo-500 flex  
               shadow-xl border
               sm:text-sm bg-purple-50 p-10 w-screen"
-                    placeholder="Describe in detail new bug/issue"
+                    placeholder="Data not rendering from API..."
                     name="ticketDescription"
                     value={newTicket.ticketDescription}
                     onChange={(e) => handleChange(e)}
                     id="ticketDescription"
                     type="text"
+                    required
                   ></textarea>
                 </div>
 
                 {/* Priority level */}
-                <div className="mt-5 flex-col">
-                  <p className="flex justify-start font-bold mt-1">
+                <div className="mt-5 font-light">
+                  <p className="flex justify-start font-light mt-1">
                     Priority Level:
                   </p>
-                  <input
-                    className="bg-white flex shadow border mt-2"
-                    placeholder="Describe in detail new bug/issue"
-                    name="priority"
-                    value={newTicket.priority}
-                    onChange={(e) => handleChange(e)}
-                    id="priority"
-                    type="number"
-                  ></input>
+                  <div className="flex">
+                    <input
+                      className="
+                      flex 
+                      shadow 
+                      border 
+                      mt-2"
+                      name="priority"
+                      value="High"
+                      onChange={(e) => handleChange(e)}
+                      id="priority"
+                      type="radio"
+                    ></input>
+                    <div className="border ml-2 text-xs mt-1">High</div>
+                  </div>
+                  <div className="flex ">
+                    <input
+                      className="bg-white flex shadow border mt-2"
+                      name="priority"
+                      value="Medium"
+                      onChange={(e) => handleChange(e)}
+                      id="priority"
+                      type="radio"
+                    ></input>
+                    <div className="border ml-2 text-xs mt-1">Medium</div>
+                  </div>
+                  <div className="flex border-black">
+                    <input
+                      className="bg-white flex shadow border mt-2"
+                      name="priority"
+                      value="Low"
+                      onChange={(e) => handleChange(e)}
+                      id="priority"
+                      type="radio"
+                      required
+                    ></input>
+                    <div className="border ml-2 text-xs mt-1">Low</div>
+                  </div>
+
                   <button
                     type="submit"
                     className="mt-4 text-indigo-900 
@@ -123,6 +178,20 @@ const Newticket = (props) => {
             hover:bg-pink-800 py-2 px-4 rounded-lg flex"
                   >
                     <p>Submit ticket</p>
+                    <FcLeftUp2 className="text-lg" />
+                  </button>
+                  <button
+                    onClick={() => {
+                      setShow(false)
+                    }}
+                    className="mt-4 text-indigo-900 
+            transition-colors 
+            duration-150 
+            bg-purple-100 rounded-lg 
+            focus:shadow-outline 
+            hover:bg-pink-800 py-2 px-4 rounded-lg flex"
+                  >
+                    <p>Cancel ticket</p>
                     <FcLeftUp2 className="text-lg" />
                   </button>
                 </div>
