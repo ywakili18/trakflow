@@ -10,7 +10,7 @@ const About = () => {
         animate={{ y: 0 }}
         exit={{ y: -300 }}
         transition={{ type: 'tween' }}
-        className="text-gray-700 p-20 flex-col text-center mt-40"
+        className="text-gray-700 p-20 flex-col text-center  mt-40"
       >
         <motion.div
           initial={{ opacity: 0 }}

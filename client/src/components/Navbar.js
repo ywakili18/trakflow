@@ -8,7 +8,7 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
     unauthenticatedOptions = (
       <AnimatePresence>
         <motion.nav
-          initial={{ y: -300 }}
+          initial={{ y: 300 }}
           animate={{ y: 0 }}
           exit={{ y: -300 }}
           transition={{ type: 'tween', duration: 0.5 }}
@@ -69,7 +69,7 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
     <motion.nav
       initial={{ y: -300 }}
       animate={{ y: 0 }}
-      exit={{ y: -300 }}
+      exit={{ y: 300 }}
       transition={{ type: 'tween', duration: 0.5 }}
       className=" text-white flex navbar1 justify-between"
     >

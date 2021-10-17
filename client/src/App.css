@@ -10,12 +10,13 @@
   background-size: cover;
   height: 100%;
 }
+
 body {
   margin: 0;
   padding: 0;
   max-width: 100%;
   height: auto;
-  background-color: #dad3dc;
+  background-color: #130f15;
   font-family: 'Montserrat Alternates', sans-serif;
 }
 .navbar {
@@ -24,7 +25,7 @@ body {
 }
 .navbar1 {
   font-family: 'Zen Tokyo Zoo', cursive;
-  background-color: rgb(53, 21, 50);
+  background-color: rgb(28, 28, 29);
 }
 .home {
   background-color: rgb(35, 66, 131);

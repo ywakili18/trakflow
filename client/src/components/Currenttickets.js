@@ -6,16 +6,17 @@ import 'moment-timezone'
 import { FcFlowChart } from 'react-icons/fc'
 import { HiOutlineIdentification } from 'react-icons/hi'
 import { GoIssueOpened } from 'react-icons/go'
-import { MdPriorityHigh } from 'react-icons/md'
+
 const Currenttickets = (props) => {
   const [tickets, setTickets] = useState([])
   const [deleteButton, confirmDeleteButton] = useState(false)
+  const [showButtons, setShowButtons] = useState(false)
 
   useEffect(() => {
     async function getTickets() {
       const res = await Client.get('/tickets')
-      console.log(res.data)
       setTickets(res.data)
+      console.log(res.data)
     }
     getTickets()
   }, [])
@@ -33,7 +34,9 @@ const Currenttickets = (props) => {
           text-purple-400"
         >
           <FcFlowChart />
-          <div className="text-purple-200 flex">Current Flow</div>
+          <div className="text-purple-200 flex text-2xl sm:text-4xl">
+            Current Flow
+          </div>
           <FcFlowChart />
         </div>
         {tickets.map((ticket) => (
@@ -53,7 +56,7 @@ const Currenttickets = (props) => {
                 <div className="text-left p-2 sm:text-2xl rounded-2xl">
                   <p className="text-center p-2 bg-purple-100 font-bold underline uppercase w-1/2 mx-auto ">
                     {ticket.ticketTitle}
-                  </p>
+                  </p>{' '}
                   <p className="font-bold text-purple-200 sm:text-2xl mt-2 flex">
                     <HiOutlineIdentification className="mr-2 text-3xl" />
                     Id:<span className="font-light"> #{ticket.id}</span>
@@ -69,7 +72,6 @@ const Currenttickets = (props) => {
                       </div>
                     </p>
                   </div>
-
                   <div className="sm:text-xl mt-2  text-purple-200 ">
                     <p className="font-bold text-lg sm:text-2xl">Priority:</p>
                     <p className="text-sm flex sm:text-lg">
@@ -98,7 +100,6 @@ const Currenttickets = (props) => {
               </div>
             </div>
 
-            {/* <p>Comments: {ticket.ticketsAndComments}</p> */}
             {/* Buttons Container */}
             <div className="flex justify-evenly">
               {/* Edit ticket */}

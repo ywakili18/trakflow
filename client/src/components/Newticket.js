@@ -60,7 +60,7 @@ const Newticket = (props) => {
             'Cancel'
           ) : (
             <div className="flex">
-              <div className="text-red-200 text-5xl flex mx-auto">
+              <div className="text-red-200 sm:text-5xl flex mx-auto">
                 <div className="">New Trak</div>
                 <MdOutlinePostAdd />
               </div>
@@ -77,7 +77,7 @@ const Newticket = (props) => {
               exit={{ opacity: 0 }}
               className="text-sm  
               mx-auto border-2 border-white 
-              bg-purple-50 p-10 mt-5 fixed inset-0 form
+              bg-gray-700 p-10 mt-5 fixed inset-0 form
               text-left"
               onSubmit={(e) => handleSubmit(e)}
             >
@@ -86,19 +86,19 @@ const Newticket = (props) => {
                 <div
                   class="
                 text-lg sm:text-2xl 
-                text-center text-gray-500  font-black tracking-wide
+                text-center text-indigo-200  font-black tracking-wide
                 "
                 >
                   New Ticket Request
                 </div>
-                <div className="mt-10 flex flex-col text-blue-500 ">
+                <div className="mt-10 flex flex-col text-indigo-200 ">
                   <span className="text-xl font-light ">Subject</span>
                   <input
                     className="
                     focus:ring-indigo-500 
                     focus:border-indigo-500 flex  
                     shadow-xl border
-                    sm:text-sm bg-purple-50 p-2"
+                    sm:text-sm bg-gray-700 p-2"
                     placeholder="Regarding #23..."
                     type="text"
                     name="ticketTitle"
@@ -110,7 +110,7 @@ const Newticket = (props) => {
                 </div>
               </div>
               {/* New bug form */}
-              <div className="flex-col mt-5 text-blue-500">
+              <div className="flex-col mt-5 text-indigo-200">
                 <div>
                   <span className="text-xl font-light">Description</span>
                 </div>
@@ -120,7 +120,7 @@ const Newticket = (props) => {
                     className="focus:ring-indigo-500 
               focus:border-indigo-500 flex  
               shadow-xl border
-              sm:text-sm bg-purple-50 p-10 w-screen"
+              sm:text-sm bg-gray-700 p-10 w-screen"
                     placeholder="Data not rendering from API..."
                     name="ticketDescription"
                     value={newTicket.ticketDescription}
