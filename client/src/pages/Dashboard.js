@@ -6,27 +6,28 @@ const Dashboard = (props) => {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ x: -300 }}
-        animate={{ x: 0 }}
-        exit={{ x: 300 }}
-        transition={{ type: 'tween' }}
+        initial={{ y: -300 }}
+        animate={{ y: 0 }}
+        exit={{ y: 300 }}
+        transition={{ type: 'tween', duration: 0.5 }}
         className="justify-between"
       >
+        {/* New Ticket */}
         <motion.div
-          initial={{ x: -300 }}
-          animate={{ x: 0 }}
-          exit={{ x: 300 }}
-          transition={{ type: 'tween' }}
+          initial={{ y: -300 }}
+          animate={{ y: 0 }}
+          exit={{ y: 300 }}
+          transition={{ type: 'tween', duration: 0.5 }}
           className=""
         >
           <Newticket {...props} />
         </motion.div>
         {/* Current  */}
-        <motion.div initial={{ x: -300 }} animate={{ x: 0 }} exit={{ x: 300 }}>
+        <motion.div initial={{ y: -300 }} animate={{ y: 0 }} exit={{ y: 300 }}>
           <motion.div
-            initial={{ x: 300 }}
-            animate={{ x: 0 }}
-            exit={{ x: -300 }}
+            initial={{ y: -300 }}
+            animate={{ y: 0 }}
+            exit={{ y: 300 }}
             transition={{ type: 'tween' }}
           >
             <Currenttickets {...props} />

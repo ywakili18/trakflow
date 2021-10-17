@@ -69,9 +69,9 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
     <motion.nav
       initial={{ y: -300 }}
       animate={{ y: 0 }}
-      exit={{ y: -500 }}
+      exit={{ y: -300 }}
       transition={{ type: 'tween', duration: 0.5 }}
-      className=" text-white flex navbar justify-between"
+      className=" text-white flex navbar1 justify-between"
     >
       <div className="flex text-lg sm:text-3xl md:text-4xl">
         <NavLink

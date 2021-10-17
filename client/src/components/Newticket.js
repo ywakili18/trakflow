@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FcLeftUp2 } from 'react-icons/fc'
-import { HiOutlineTicket } from 'react-icons/hi'
+import { MdOutlinePostAdd } from 'react-icons/md'
 import Client from '../services/api'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -35,31 +35,38 @@ const Newticket = (props) => {
   }
 
   return (
-    <div class=" bg-gray-300 ">
+    <div class="bg-purple-200">
       {/* Title */}
       <div
         className="
           mx-auto
           text-center 
           text-sm font-bold  
-          w-full"
+          "
       >
-        <div>
-          <button
-            onClick={() => setShow(!show)}
-            className="
+        <button
+          onClick={() => setShow(!show)}
+          className="
             text-indigo-900 
             transition-colors 
             duration-150 
-            bg-purple-100 rounded-lg 
-            focus:shadow-outline 
-            hover:bg-pink-800 py-2 px-4 rounded-lg"
-          >
-            {show ? 'Cancel' : 'Submit a new ticket request'}
-
-            <HiOutlineTicket className="text-xl" />
-          </button>
-        </div>
+            bg-gray-800 
+            focus:shadow-outline w-screen 
+            hover:bg-gray-600 
+            hover:text-purple-100
+            py-2 px-4"
+        >
+          {show ? (
+            'Cancel'
+          ) : (
+            <div className="flex">
+              <div className="text-red-200 text-5xl flex mx-auto">
+                <div className="">New Trak</div>
+                <MdOutlinePostAdd />
+              </div>
+            </div>
+          )}
+        </button>
 
         <AnimatePresence>
           {show ? (
@@ -70,7 +77,7 @@ const Newticket = (props) => {
               exit={{ opacity: 0 }}
               className="text-sm  
               mx-auto border-2 border-white 
-              bg-purple-50 p-10 mt-5  fixed inset-0 form
+              bg-purple-50 p-10 mt-5 fixed inset-0 form
               text-left"
               onSubmit={(e) => handleSubmit(e)}
             >
@@ -78,14 +85,14 @@ const Newticket = (props) => {
               <div className="">
                 <div
                   class="
-                text-sm sm:text-2xl 
-                text-center text-blue-500 font-black
-                underline"
+                text-lg sm:text-2xl 
+                text-center text-gray-500  font-black tracking-wide
+                "
                 >
                   New Ticket Request
                 </div>
-                <div className="mt-1 flex flex-col text-blue-500 ">
-                  <span className="text font-light">Subject</span>
+                <div className="mt-10 flex flex-col text-blue-500 ">
+                  <span className="text-xl font-light ">Subject</span>
                   <input
                     className="
                     focus:ring-indigo-500 
@@ -105,7 +112,7 @@ const Newticket = (props) => {
               {/* New bug form */}
               <div className="flex-col mt-5 text-blue-500">
                 <div>
-                  <span className="text font-light">Description</span>
+                  <span className="text-xl font-light">Description</span>
                 </div>
 
                 <div className="flex">
@@ -125,24 +132,24 @@ const Newticket = (props) => {
                 </div>
 
                 {/* Priority level */}
-                <div className="mt-5 font-light">
-                  <p className="flex justify-start font-light mt-1">
+                <div className="mt-5 font-light ">
+                  <p className="flex justify-start font-light text-xl mt-1">
                     Priority Level:
                   </p>
-                  <div className="flex">
+                  <div className="flex ">
                     <input
                       className="
                       flex 
                       shadow 
-                      border form-radio
-                      mt-2"
+                      form-radio
+                      mt-4"
                       name="priority"
                       value="High"
                       onChange={(e) => handleChange(e)}
                       id="priority"
                       type="radio"
                     ></input>
-                    <div className="border ml-2 text-xs mt-1">High</div>
+                    <div className="ml-2 text-xl mt-1">High</div>
                   </div>
                   <div className="flex ">
                     <input
@@ -153,7 +160,7 @@ const Newticket = (props) => {
                       id="priority"
                       type="radio"
                     ></input>
-                    <div className="border ml-2 text-xs mt-1">Medium</div>
+                    <div className="ml-2 text-xl">Medium</div>
                   </div>
                   <div className="flex border-black">
                     <input
@@ -165,17 +172,18 @@ const Newticket = (props) => {
                       type="radio"
                       required
                     ></input>
-                    <div className="border ml-2 text-xs mt-1">Low</div>
+                    <div className="ml-2 text-xs text-xl">Low</div>
                   </div>
 
                   <button
                     type="submit"
                     className="mt-4 text-indigo-900 
-            transition-colors 
-            duration-150 
-            bg-purple-100 rounded-lg 
-            focus:shadow-outline 
-            hover:bg-pink-800 py-2 px-4 rounded-lg flex"
+                    hover:text-indigo-100
+                    transition-colors 
+                    duration-150 
+                    bg-purple-100 rounded-lg 
+                    focus:shadow-outline 
+                    hover:bg-pink-800 py-2 px-4 rounded-lg flex"
                   >
                     <p>Submit ticket</p>
                     <FcLeftUp2 className="text-lg" />
@@ -185,11 +193,12 @@ const Newticket = (props) => {
                       setShow(false)
                     }}
                     className="mt-4 text-indigo-900 
-            transition-colors 
-            duration-150 
-            bg-purple-100 rounded-lg 
-            focus:shadow-outline 
-            hover:bg-pink-800 py-2 px-4 rounded-lg flex"
+                    transition-colors 
+                    duration-150 
+                    bg-purple-100 rounded-lg 
+                    focus:shadow-outline 
+                    hover:bg-pink-800 hover:text-indigo-50
+                    py-2 px-4 rounded-lg flex"
                   >
                     <p>Cancel ticket</p>
                     <FcLeftUp2 className="text-lg" />
