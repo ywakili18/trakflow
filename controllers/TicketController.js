@@ -14,6 +14,11 @@ const GetTickets = async (req, res) => {
               attributes: ['id', 'userName']
             }
           ]
+        },
+        {
+          model: User,
+          as: 'ticketsAndUsers',
+          attributes: ['id', 'userName', 'role']
         }
       ]
     })

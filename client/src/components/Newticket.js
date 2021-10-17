@@ -35,7 +35,7 @@ const Newticket = (props) => {
   }
 
   return (
-    <div class="bg-purple-200">
+    <div className="bg-purple-200">
       {/* Title */}
       <div
         className="
@@ -84,7 +84,7 @@ const Newticket = (props) => {
               {/* Ticket Title */}
               <div className="">
                 <div
-                  class="
+                  className="
                 text-lg sm:text-2xl 
                 text-center text-indigo-200  font-black tracking-wide
                 "

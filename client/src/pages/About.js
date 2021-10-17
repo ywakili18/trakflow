@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FiGithub, FiLinkedin } from 'react-icons/fi'
-
+import Currentcomments from '../components/Currentcomments'
 const About = () => {
   return (
     <AnimatePresence>
@@ -10,7 +10,7 @@ const About = () => {
         animate={{ y: 0 }}
         exit={{ y: -300 }}
         transition={{ type: 'tween' }}
-        className="text-gray-700 p-20 flex-col text-center  mt-40"
+        className="text-gray-400 p-20 flex-col text-center  mt-40"
       >
         <motion.div
           initial={{ opacity: 0 }}
@@ -21,9 +21,11 @@ const About = () => {
         >
           {/* Title */}
           <p
-            class="
-          text-sm sm:text-3xl text-center
-           mx-auto 
+            className="
+          text-sm 
+          sm:text-3xl 
+          text-center
+          mx-auto 
           font-bold"
           >
             Check out the repo, follow me on LinkedIn and
@@ -36,7 +38,7 @@ const About = () => {
             below!
           </p>
           {/* Icons container */}
-          <div class="flex justify-evenly mx-auto">
+          <div className="flex justify-evenly mx-auto">
             {/* Linkedin */}
             <a
               rel="noreferrer"
@@ -44,7 +46,7 @@ const About = () => {
               href="https://linkedin.com/in/youseffect"
             >
               <button
-                class="
+                className="
                 text-4xl sm:text-6xl 
                 hover:text-purple-600 
                 focus:ring  transition-all p-10"
@@ -59,7 +61,7 @@ const About = () => {
               href="https://github.com/ywakili18/trakflow"
             >
               <button
-                class="
+                className="
           text-4xl sm:text-6xl 
               hover:text-purple-600 
               focus:ring  transition-all p-10"
@@ -74,7 +76,7 @@ const About = () => {
               href="https://www.youseffect.com/"
             >
               <button
-                class="
+                className="
               hover:text-purple-600 
               focus:ring transition-all 
               underline text-xl sm:text-4xl 

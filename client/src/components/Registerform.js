@@ -39,7 +39,7 @@ export default function Registerform(props) {
   return (
     <AnimatePresence>
       <div>
-        <div class="flex min-h-screen">
+        <div className="flex min-h-screen">
           <motion.div
             initial={{ x: -300 }}
             animate={{ x: 0 }}
@@ -53,13 +53,13 @@ export default function Registerform(props) {
             animate={{ x: 0 }}
             exit={{ x: -300 }}
             transition={{ type: 'tween', duration: 0.5 }}
-            class="w-1/2 
+            className="w-1/2 
             bg-gradient-to-b from-red-200 via-blue-200 to-blue-400 
             text-gray-800  
             px-4 py-6 flex flex-col 
             justify-center"
           >
-            <div class="mx-auto text-center w-full sm:w-auto">
+            <div className="mx-auto text-center w-full sm:w-auto">
               <p className="text-sm sm:text-2xl  text-gray-500">
                 Register and use{' '}
                 <span class="font-bold text-indigo-400 underline">
@@ -68,10 +68,10 @@ export default function Registerform(props) {
                 today
               </p>
               {/* input form container */}
-              <div class=" mt-4 bg-white rounded-lg text-left text-xs sm-text-2xl">
+              <div className=" mt-4 bg-white rounded-lg text-left text-xs sm-text-2xl">
                 {/* Email */}
-                <form class="p-2 sm:p-8" onSubmit={handleSubmit}>
-                  <label class="block font-semibold" htmlFor="email">
+                <form className="p-2 sm:p-8" onSubmit={handleSubmit}>
+                  <label className="block font-semibold" htmlFor="email">
                     Enter Email
                   </label>
                   <input
@@ -81,7 +81,7 @@ export default function Registerform(props) {
                     placeholder="example@example.com"
                     value={formValues.email}
                     required
-                    class=" 
+                    className=" 
                     border w-full h-5 
                     px-2 py-4 mt-2 
                     hover:outline-none 
@@ -98,7 +98,7 @@ export default function Registerform(props) {
                     placeholder="Username"
                     value={formValues.userName}
                     required
-                    class="border w-full h-5 
+                    className="border w-full h-5 
                     px-2 py-4 mt-2 
                     hover:outline-none 
                     focus:outline-none 
@@ -106,7 +106,10 @@ export default function Registerform(props) {
                     rounded-md"
                   />
                   {/* Password */}
-                  <label class="block mt-3 font-semibold" htmlFor="password">
+                  <label
+                    className="block mt-3 font-semibold"
+                    htmlFor="password"
+                  >
                     Create Password
                   </label>
                   <input
@@ -116,7 +119,7 @@ export default function Registerform(props) {
                     placeholder="Enter Password"
                     value={formValues.password}
                     required
-                    class="border w-full h-5 
+                    className="border w-full h-5 
                     px-2 py-4 mt-2 
                     hover:outline-none 
                     focus:outline-none 
@@ -125,7 +128,7 @@ export default function Registerform(props) {
                   />
                   {/* Confirm Password */}
                   <label
-                    class="block mt-3 font-semibold"
+                    className="block mt-3 font-semibold"
                     htmlFor="confirmPassword"
                   >
                     Confirm Password
@@ -137,7 +140,7 @@ export default function Registerform(props) {
                     value={formValues.confirmPassword}
                     placeholder="Confirm Password"
                     required
-                    class="border w-full h-5 
+                    className="border w-full h-5 
                     px-2 py-4 mt-2 
                     hover:outline-none 
                     focus:outline-none 
@@ -145,7 +148,7 @@ export default function Registerform(props) {
                     rounded-md"
                   />
                   {/* Role */}
-                  <label class="block mt-3 font-semibold">Your role</label>
+                  <label className="block mt-3 font-semibold">Your role</label>
                   <input
                     onChange={handleChange}
                     name="role"
@@ -153,7 +156,7 @@ export default function Registerform(props) {
                     placeholder="ex: Jr.Dev, UX/UI designer"
                     value={formValues.role}
                     required
-                    class="border w-full h-5 
+                    className="border w-full h-5 
                     px-2 py-4 mt-2 
                     hover:outline-none 
                     focus:outline-none 
@@ -161,7 +164,7 @@ export default function Registerform(props) {
                     rounded-md"
                   />
                   {/* Register Button */}
-                  <div class="flex justify-between items-baseline">
+                  <div className="flex justify-between items-baseline">
                     <button
                       disabled={
                         !formValues.email ||
@@ -169,7 +172,7 @@ export default function Registerform(props) {
                           formValues.confirmPassword === formValues.password)
                       }
                       type="submit"
-                      class="mt-4 text-indigo-100 
+                      className="mt-4 text-indigo-100 
                         transition-colors 
                         duration-150 
                         bg-blue-700 rounded-lg 

@@ -22,7 +22,7 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
               transition-all flex p-2 underline "
               to="/login"
             >
-              <span class="mt-2 sm:mt-5">login</span>
+              <span className="mt-2 sm:mt-5">login</span>
             </NavLink>
             <NavLink
               className=" 
@@ -31,7 +31,7 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
           transition-all flex p-2 underline "
               to="/register"
             >
-              <span class="mt-2 sm:mt-5">register</span>
+              <span className="mt-2 sm:mt-5">register</span>
             </NavLink>
             <NavLink
               className=" 
@@ -40,7 +40,7 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
               transition-all flex p-2 underline "
               to="/about"
             >
-              <span class="mt-2 sm:mt-5">about</span>
+              <span className="mt-2 sm:mt-5">about</span>
             </NavLink>
           </div>
 
@@ -81,7 +81,7 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
           transition-all flex p-2 underline "
           to="/dashboard"
         >
-          <span class="mt-2 sm:mt-5">dashboard</span>
+          <span className="mt-2 sm:mt-5">dashboard</span>
         </NavLink>
         <NavLink
           className=" 
@@ -91,7 +91,7 @@ const Navbar = ({ authenticated, user, handleLogOut }) => {
           onClick={handleLogOut}
           to="/login"
         >
-          <span class="mt-2 sm:mt-5">logout</span>
+          <span className="mt-2 sm:mt-5">logout</span>
         </NavLink>
         <NavLink
           className=" 

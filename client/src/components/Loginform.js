@@ -45,7 +45,7 @@ const Loginform = (props) => {
             <div className="mx-auto text-center w-full sm:w-auto">
               <p className="text-sm sm:text-2xl  text-gray-500">
                 Login to your{' '}
-                <span class="font-bold text-indigo-400 underline">
+                <span className="font-bold text-indigo-400 underline">
                   Trafklow
                 </span>{' '}
                 account

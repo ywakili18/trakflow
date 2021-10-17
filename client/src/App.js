@@ -9,6 +9,7 @@ import Navbar from './components/Navbar'
 import { CheckSession } from './services/Auth'
 import ProtectedRoute from './components/ProtectedRoute'
 import Editticketpage from './pages/Editticketpage'
+import Currentcomments from './components/Currentcomments'
 import { motion, AnimatePresence } from 'framer-motion'
 import Home from './pages/Home'
 function App() {
@@ -62,6 +63,15 @@ function App() {
               component={Editticketpage}
             />
           )}
+          {user && authenticated && (
+            <ProtectedRoute
+              authenticated={authenticated}
+              user={user}
+              path="/comments/:ticketId"
+              component={Currentcomments}
+            />
+          )}
+
           <Route
             path="/login"
             component={(props) => (

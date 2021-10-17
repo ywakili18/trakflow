@@ -6,7 +6,7 @@ const GetComments = async (req, res) => {
       include: {
         model: User,
         as: 'commentsAndUsers',
-        attributes: ['id', 'userName']
+        attributes: ['id', 'userName', 'role']
       }
     })
 
