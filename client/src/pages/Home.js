@@ -17,7 +17,7 @@ const Home = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ type: 'tween', delay: 0.5 }}
+          transition={{ type: 'tween', delay: 0.7 }}
         >
           <div className="flex">
             <h1
