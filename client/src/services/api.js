@@ -1,6 +1,6 @@
 import Axios from 'axios'
 
-export const BASE_URL = 'https://immense-dawn-73702.herokuapp.com/api'
+export const BASE_URL = 'https://immense-dawn-73702.herokuapp.com/'
 const Client = Axios.create({ baseURL: BASE_URL })
 
 // Intercepts every request axios makes
