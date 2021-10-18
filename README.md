@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+![Trakflow](https://i.ibb.co/ZVx5hNG/Screen-Shot-2021-10-17-at-11-40-05-PM.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Yousof Wakili
 
-## Available Scripts
+## [**GitHub**](https://github.com/ywakili18) **|** [**LinkedIn**](https://www.linkedin.com/in/youseffect/) **|** [**Portfolio**](https://youseffect.com/)
 
-In the project directory, you can run:
+Trakflow is a bug-tracking tool that utilizes PostgreSQL, Express.js, Node.js for the back-end and the front-end uses React.js as JavaScript library, TailwindCSS for utility-first styling and Framer Motion for screen animations/motions. Trakflow allows the user to create a new ticket called "Traks" that is added and can be tracked through its history.
 
-### `npm start`
+## Trakflow features:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Login authentication using JWT tokens
+- Users can create new tickets, assigned with their current roles (ex: Jr.Dev, Project Manager)
+- Add new updates to tickets and close when ticket is completed
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![PERN Stack](https://www.freecodecamp.org/news/content/images/2020/03/PERN.png)
 
-### `npm test`
+### **_Planning process_**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### [Trello for daily planning](https://trello.com/b/gU7Y39qk/trakflow)
 
-### `npm run build`
+### Entity Relationship Diagram (ERD) used for Backend Design Architecture
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![ERD](https://i.ibb.co/Nrqyr2m/Screen-Shot-2021-10-07-at-10-25-13-PM.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ![Front-end folder stucture](https://i.ibb.co/7g7gGSr/Screen-Shot-2021-10-18-at-12-08-44-AM.png)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Getting started
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## To run Trakflow, clone repository then:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Front-End:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### `cd client `
 
-## Learn More
+#### `npm start or yarn start`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Back-End:
 
-### Code Splitting
+### In root folder:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### `npm run dev or yarn run`
 
-### Analyzing the Bundle Size
+# Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Home
 
-### Making a Progressive Web App
+![Home](https://i.ibb.co/nnh4RPz/Screen-Shot-2021-10-17-at-11-15-53-PM.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Login
 
-### Advanced Configuration
+![Login](https://i.ibb.co/qd2CSgw/Screen-Shot-2021-10-17-at-11-16-11-PM.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Current Flow
 
-### Deployment
+![Current Flow](https://i.ibb.co/hCsN95P/Screen-Shot-2021-10-17-at-11-16-30-PM.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### New Trak Ticket
 
-### `npm run build` fails to minify
+![New Trak](https://i.ibb.co/tLHwWF7/Screen-Shot-2021-10-17-at-11-17-15-PM.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Update Trak Ticket
+
+![Update Trak](https://i.ibb.co/7vmnnqk/Screen-Shot-2021-10-17-at-11-18-13-PM.png)
