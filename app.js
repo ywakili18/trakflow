@@ -5,7 +5,7 @@ const path = require('path')
 const express = require('express')
 const AppRouter = require('./routes/AppRouter')
 
-const PORT = process.env.PORT || 3001
+// const PORT = process.env.PORT || 3001
 
 app.use(cors())
 app.use(bodyParser.json())
@@ -20,4 +20,8 @@ if (process.env.NODE_ENV === 'production') {
   })
 }
 
-app.listen(PORT, () => console.log(`Server Started On Port: ${PORT}`))
+app.listen(process.env.PORT || 3001),
+  function () {
+    var port = server.address().port
+    console.log('Express is working on port ' + port)
+  }
