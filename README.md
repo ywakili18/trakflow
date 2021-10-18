@@ -2,7 +2,7 @@
 
 ## Yousof Wakili
 
-## [**GitHub**](https://github.com/ywakili18) **|** [**LinkedIn**](https://www.linkedin.com/in/youseffect/) **|** [**Portfolio**](https://youseffect.com/)
+#### [**GitHub**](https://github.com/ywakili18) **|** [**Say Hi to me on LinkedIn!**](https://www.linkedin.com/in/youseffect/) **|** [**Personal Portfolio**](https://youseffect.com/)
 
 Trakflow is a bug-tracking tool that utilizes PostgreSQL, Express.js, Node.js for the back-end and the front-end uses React.js as JavaScript library, TailwindCSS for utility-first styling and Framer Motion for screen animations/motions. Trakflow allows the user to create a new ticket called "Traks" that is added and can be tracked through its history.
 
@@ -14,15 +14,15 @@ Trakflow is a bug-tracking tool that utilizes PostgreSQL, Express.js, Node.js fo
 
 ![PERN Stack](https://www.freecodecamp.org/news/content/images/2020/03/PERN.png)
 
-### **_Planning process_**
+# **_Planning process_**
 
 ### [Trello for daily planning](https://trello.com/b/gU7Y39qk/trakflow)
 
-### Entity Relationship Diagram (ERD) used for Backend Design Architecture
-
----
+# Entity Relationship Diagram (ERD) used for Backend Design Architecture
 
 ![ERD](https://i.ibb.co/Nrqyr2m/Screen-Shot-2021-10-07-at-10-25-13-PM.png)
+
+# Front-End folder struture
 
 ## ![Front-end folder stucture](https://i.ibb.co/7g7gGSr/Screen-Shot-2021-10-18-at-12-08-44-AM.png)
 
