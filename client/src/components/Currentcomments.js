@@ -8,6 +8,7 @@ import { HiOutlineIdentification } from 'react-icons/hi'
 import { MdOutlineInsertComment } from 'react-icons/md'
 import { RiGhostFill } from 'react-icons/ri'
 import { BsPersonBadge } from 'react-icons/bs'
+import { motion, AnimatePresence } from 'framer-motion'
 const Currentcomments = (props) => {
   const [comments, setComments] = useState([])
 
@@ -23,7 +24,18 @@ const Currentcomments = (props) => {
   const history = useHistory()
 
   return (
-    <div className="flex flow">
+    <motion.div
+      initial={{ opacity: 0, y: 8 }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.4,
+          ease: [0.61, 1, 0.88, 1]
+        }
+      }}
+      className="flex flow"
+    >
       <div className="w-screen">
         <div
           className="
@@ -39,11 +51,7 @@ const Currentcomments = (props) => {
           <FcFlowChart />
         </div>
         {comments.map((comment) => (
-          <div
-            key={comment.id}
-            id={comment.id}
-            className="border-2 border-purple-200 mb-5"
-          >
+          <div key={comment.id} id={comment.id} className="">
             {/* Ticket Information Container */}
             <div className="mx-auto p-5 ">
               <div
@@ -53,7 +61,7 @@ const Currentcomments = (props) => {
               >
                 {/* Title of open ticket, its priority level, id, and content */}
                 <div className="text-left p-2 sm:text-2xl rounded-2xl">
-                  <p className="font-bold text-purple-200 sm:text-2xl mt-2 flex">
+                  <p className="font-bold text-red-400 sm:text-2xl mt-2 flex">
                     <HiOutlineIdentification className="mr-2 text-3xl" />
                     Comment<span className="font-light"> #{comment.id}</span>
                   </p>
@@ -129,7 +137,7 @@ const Currentcomments = (props) => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   )
 }
 

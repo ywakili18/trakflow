@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Client from '../services/api'
 import { useHistory } from 'react-router'
+import { motion, AnimatePresence } from 'framer-motion'
 const Editticketpage = (props) => {
   const history = useHistory()
   const [updatedTicket, setUpdatedTicket] = useState({
@@ -29,7 +30,17 @@ const Editticketpage = (props) => {
     })
   }
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, y: 8 }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.4,
+          ease: [0.61, 1, 0.88, 1]
+        }
+      }}
+    >
       {/* image container */}
       {/* Login form container */}
       <div className="h-screen bg-pink-100 text-gray-800 flex flex-col justify-center">
@@ -99,7 +110,7 @@ const Editticketpage = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

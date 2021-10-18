@@ -34,7 +34,9 @@ const Home = () => {
             </p>
             {/* LOGIN-BUTTON */}
             <div class="flex mt-10 text-base sm:text-2xl">
-              <button
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 className="border-2 
                bg-blue-200
               text-white rounded-2xl p-2 sm:p-4
@@ -45,8 +47,10 @@ const Home = () => {
                 }}
               >
                 Login
-              </button>
-              <button
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 className="border-2 
           bg-pink-200
           text-white rounded-2xl p-2 sm:p-4
@@ -57,7 +61,7 @@ const Home = () => {
                 }}
               >
                 New to Trakflow? Sign up here!
-              </button>
+              </motion.button>
             </div>
           </div>
         </motion.div>

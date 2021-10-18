@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FcLeftUp2 } from 'react-icons/fc'
-import { MdOutlinePostAdd } from 'react-icons/md'
+import { MdOpacity, MdOutlinePostAdd } from 'react-icons/md'
 import Client from '../services/api'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -44,40 +44,46 @@ const Newticket = (props) => {
           text-sm font-bold  
           "
       >
-        <button
+        <motion.button
           onClick={() => setShow(!show)}
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
           className="
             text-indigo-900 
             transition-colors 
             duration-150 
-            bg-gray-800 
+            bg-gray-900 
             focus:shadow-outline w-screen 
-            hover:bg-gray-600 
-            hover:text-purple-100
+            hover:bg-indigo-500 
+            hover:text-green-800 
             py-2 px-4"
         >
           {show ? (
             'Cancel'
           ) : (
             <div className="flex">
-              <div className="text-red-200 sm:text-5xl flex mx-auto">
+              <div className="text-red-300 sm:text-5xl flex mx-auto hover:text-pink-100">
                 <div className="">New Trak</div>
                 <MdOutlinePostAdd />
               </div>
             </div>
           )}
-        </button>
+        </motion.button>
 
         <AnimatePresence>
           {show ? (
             // form container
             <motion.form
+              animate={{
+                scale: [1, 0.75],
+                opacity: 1
+              }}
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              exit={{ scale: [0.75, 1], opacity: 0 }}
               className="text-sm  
               mx-auto border-2 border-white 
-              bg-gray-700 p-10 mt-5 fixed inset-0 form
+              bg-gray-900 p-10 mt-5 fixed rounded-2xl inset-0 form
               text-left"
               onSubmit={(e) => handleSubmit(e)}
             >

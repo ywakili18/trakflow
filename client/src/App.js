@@ -11,7 +11,9 @@ import ProtectedRoute from './components/ProtectedRoute'
 import Editticketpage from './pages/Editticketpage'
 import Currentcomments from './components/Currentcomments'
 import { motion, AnimatePresence } from 'framer-motion'
+
 import Home from './pages/Home'
+
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
